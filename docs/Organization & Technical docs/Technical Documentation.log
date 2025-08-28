@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  27 AUG 2025 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  28 AUG 2025 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,7 +534,9 @@ Overfull \hbox (9.97307pt too wide) in paragraph at lines 187--207
 
 [5]
 
-[6] (./Technical Documentation.aux)
+[6]
+
+[7] (./Technical Documentation.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -544,22 +546,22 @@ ed.
 (rerunfilecheck)             Checksum: 9AA49A783C3D260CD2432B9ADF74EA2B;10825.
  ) 
 Here is how much of TeX's memory you used:
- 11372 strings out of 467800
- 183168 string characters out of 5436061
+ 11373 strings out of 467800
+ 183174 string characters out of 5436061
  608056 words of memory out of 5000000
  39811 multiletter control sequences out of 15000+600000
  632029 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1230b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1595b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1095.pfb>
-Output written on "Technical Documentation.pdf" (10 pages, 107700 bytes).
+Output written on "Technical Documentation.pdf" (11 pages, 110954 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 418 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
  505 words of extra memory for PDF output out of 10000 (max. 10000000)
 
