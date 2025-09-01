@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  31 AUG 2025 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.31)  1 SEP 2025 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -497,58 +497,46 @@ l.79 \cleardoublepage
 
 
 ]
-<TopperNavGanttChartSprint1.png, id=103, 597.432pt x 322.806pt>
-File: TopperNavGanttChartSprint1.png Graphic file (type png)
-<use TopperNavGanttChartSprint1.png>
-Package pdftex.def Info: TopperNavGanttChartSprint1.png  used on input line 113
-.
-(pdftex.def)             Requested size: 418.19955pt x 225.96265pt.
-
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 \section
-              {Software Process Model} [1
+l.162 \subsection
+                 {Sprint 4 Progress Visibility} [1
 
- <./TopperNavGanttChartSprint1.png>]
+]
 
 [2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-(./Organization Documentation.aux)
+
+[3] (./Organization Documentation.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-Package rerunfilecheck Warning: File `"Organization Documentation".out' has cha
-nged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Organization Documentation".out':
-(rerunfilecheck)             Before: 7AA90320C8AF25092A8235E57CA5B520;2643
-(rerunfilecheck)             After:  75EE49E46C720C3D9BE3E918DDB2587C;2627.
+Package rerunfilecheck Info: File `"Organization Documentation".out' has not ch
+anged.
+(rerunfilecheck)             Checksum: B0EC898C79D1CCBB24EB42EDDD4E6D14;2834.
  ) 
 Here is how much of TeX's memory you used:
  11278 strings out of 467800
- 181715 string characters out of 5436061
+ 181544 string characters out of 5436061
  598037 words of memory out of 5000000
- 39770 multiletter control sequences out of 15000+600000
- 632029 words of font info for 57 fonts, out of 8000000 for 9000
+ 39767 multiletter control sequences out of 15000+600000
+ 632197 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,515b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1001b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1095.pfb>
-Output written on "Organization Documentation.pdf" (5 pages, 104495 bytes).
+pe1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1095.pfb>
+Output written on "Organization Documentation.pdf" (6 pages, 101383 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
