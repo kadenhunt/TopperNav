@@ -256,7 +256,7 @@ The software we are using already are Google doc, TexLive, github, Android Studi
 \subsubsection{Physical}
 %100 words
 % Describe the Physical System Boundaries.
-Text goes here.
+The physical system boundaries for the GPS-Based Campus Room finder are limited to mobile devices, primarily Android smart phones used by WKU students and faculty. The application relies on the mobile phones built-in hardware components such as the GPS system, touchscreen interface, and mobile network for accurate navigation. It will not include any external hardware devices not included in the user's smart phone. The system interacts with Google Maps API (or similar) for real-time navigation and requires the campus buildings and room data stored in the project database. Any devices outside of android mobile devices, such as iphones, PCs, and kiosks, lie out of the scope of the project.
 
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
@@ -274,7 +274,7 @@ Text goes here.
 \subsubsection{Logical}
 %100 words
 % Describe the Logical System Boundaries.
-Text goes here.
+The logical system boundaries for the GPS-Based Campus Room Finder defines the flow of the information and functions managed by the application. Internally, the system handles location detection, room and building searches, and route generation. It manages the retrieval of the campus building and room number data from the project database and uses the GPS coordinates for navigation. Externally, the system communicates with Google Maps API and user-interface to display directions and built-in mobile operating systems for device-level functions such as notifications. Any process beyond navigation, such as class scheduling and campus event times remain outside the logical scope of the project.
 
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
