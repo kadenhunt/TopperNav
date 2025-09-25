@@ -49,7 +49,8 @@ Kaden Hunt         & kaden.hunt144@topper.wku.edu         \\ \hline
         
 \vspace{4in}
 
-\centering        
+\centering  
+Michael Galloway \\
 CS 361 \\
 Fall 2025\\
 Project Technical Documentation
@@ -417,15 +418,19 @@ Text goes here.
 %	Title for each State Diagram
 %	A short description of the information given in the diagram
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-Text goes here.
+The following state diagram models the process of a user searching for a campus room. 
+The diagram begins when the user enters a room number and submits it. 
+The system then validates the input: if it is invalid, the user is prompted to retry; if valid, the system queries the database. 
+If the room is found, a path is generated and directions are displayed. 
+If the room is not found, or a query fails, the user can correct their input and resubmit. 
+This diagram focuses only on the search and route-display feature in Sprint 2, since implementation has not yet begun. 
 
-%uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/state_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{state_diagram}
-%\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/state_diagram.png}
+    \caption{State diagram for the room search feature, showing user input, validation, query, error handling, and path display.}
+    \label{state_diagram}
+\end{figure}
 
 \subsubsection{Component Diagrams}
 %Single diagram that defines component APIs and communication pathways for all software and dependencies used in the product.
