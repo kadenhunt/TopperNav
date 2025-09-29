@@ -1,4 +1,7 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Structural Design Pattern Facade.}}{4}{figure.caption.6}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{5}{figure.caption.7}%
-\contentsline {figure}{\numberline {3}{\ignorespaces State diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Deployment diagram for the mobile Room Finder app.}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Structural Design Pattern Facade.}}{5}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Use Case Diagrams.}}{6}{figure.caption.8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Use Case Scenarion Table for the search room use case.}}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces State diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Deployment diagram for the mobile Room Finder app.}}{9}{figure.caption.12}%
