@@ -1,8 +1,10 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Structural Design Pattern Facade.}}{4}{figure.caption.6}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Structural Design Pattern Facade.}}{5}{figure.caption.7}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Use Case Diagrams.}}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Use Case Scenarion Table for the search room use case.}}{7}{figure.caption.9}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {6}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{8}{figure.caption.11}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Deployment diagram for the mobile Room Finder app.}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Requirements Traceability Table.}}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Structural Design Pattern: \textit {Facade} for routing \& map services.}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Creational Design Pattern: \textit {Singleton} for AppConfig.}}{5}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Behavioral Design Pattern: State.}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Use Case Diagrams.}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Use Case Scenario Table for the search room use case.}}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Component diagram.}}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Deployment diagram for mobile + external services.}}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Requirements Traceability Table.}}{11}{figure.caption.15}%

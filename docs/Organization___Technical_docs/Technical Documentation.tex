@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{imakeidx}
 \usepackage{indentfirst}
+\usepackage{placeins}
 \makeindex
 %---------------------------Do Not Edit Anything Above This Line!!------------------------
 
@@ -50,7 +51,7 @@ Kaden Hunt         & kaden.hunt144@topper.wku.edu         \\ \hline
 \vspace{4in}
 
 \centering  
-Michael Galloway \\
+Client: Michael Galloway \\
 CS 361 \\
 Fall 2025\\
 Project Technical Documentation
@@ -320,23 +321,25 @@ Text goes here.
 Text goes here.
 
 %uncomment the section below when you're ready to insert an image
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/Facade Design Pattern.drawio.png}
-    \caption{Structural Design Pattern Facade.}
-    \label{class_diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.62\textwidth]{images/Facade Design Pattern.drawio.png}
+  \caption{Structural Design Pattern: \textit{Facade} for routing \& map services.}
+  \label{fig:facade}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/Singleton Class Diagram.png}
-    \caption{Structural Design Pattern Facade.}
-    \label{class_diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.62\textwidth]{images/Singleton Class Diagram.png}
+  \caption{Creational Design Pattern: \textit{Singleton} for AppConfig.}
+  \label{fig:singleton}
 \end{figure}
 
-
-
-
+\begin{figure}[H]
+\includegraphics[width=0.6\textwidth]{images/ClassDesignPattern.png}
+\caption{Behavioral Design Pattern: State.}
+\label{state_pattern}
+\end{figure}
 
 \subsubsection{Use Case Diagrams}
 %Enough to cover all technical functional requirements.
@@ -344,10 +347,9 @@ Text goes here.
 %	Title for each Use Case Diagram
 %	A description of information given in the diagram.
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used.
-Text goes here
-
+Actors: Student/Faculty (User). Core use cases: Determine Location, Search Room, Generate Route, Display Estimated Travel Time
 %uncomment the section below when you're ready to insert an image
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{images/Use Case Diagrams.png}
     \caption{Use Case Diagrams.}
@@ -361,13 +363,13 @@ Text goes here
 %	Title for each Use Case Scenario
 %	A short description of the information given in the scenario.
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-Text goes here.
 
-%uncomment the section below when you're ready to insert an image
-\begin{figure}[h!]
+%uncomment the section below when you're ready to insert an image\\
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{images/Use Case Scenario.png}
-    \caption{Use Case Scenarion Table for the search room use case.}
+    \caption{Use Case Scenario Table for the search room use case.}
     \label{use_case_scenario}
 \end{figure}
 
@@ -381,7 +383,7 @@ Text goes here.
 The following sequence diagram shows the process of the actor (user) getting into the UI and requesting a location. This would then go through the database to get location data. It would then create a route from the users location and the desired room. As the user is moving the route would update in relation to the location of the user.
 
 %uncomment the section below when you're ready to insert an image
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{images/TopperNav Sequance.drawio.png}
     \caption{Sequence diagram for the user route request, generation, and update.}
@@ -401,7 +403,7 @@ If the room is found, a path is generated and directions are displayed.
 If the room is not found, or a query fails, the user can correct their input and resubmit. 
 This diagram focuses only on the search and route-display feature in Sprint 2, since implementation has not yet begun. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{images/state_diagram.png}
     \caption{State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}
@@ -418,12 +420,13 @@ This diagram focuses only on the search and route-display feature in Sprint 2, s
 Text goes here.
 
 %uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/component_diagram.png}
-%    \caption{Description of the image here.}
-%    \label{component_diagram}
-%\end{figure}
+Components: UI, Navigation Engine, Database, GPS Service, External API.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/component_diagram.png}
+  \caption{Component diagram.}
+  \label{fig:component}
+\end{figure}
 
 \subsubsection{Deployment Diagrams}
 %Single diagram that defines the physical nodes, virtual nodes, and communication for all software related to the product.  Should be an extension of the Component Diagram.
@@ -435,11 +438,11 @@ Text goes here.
 The diagram shows the physical side of the system, which is the user device like a smart phone or tablet.Also related to the physical side there is the client UI. Then there is also the virtual that has database, and routing engine that makes the route. The virtual also holds all the logic and back end APIs.
 
 %uncomment the section below when you're ready to insert an image
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{images/TopperNav Deployment Diagram.drawio.png}
-    \caption{Deployment diagram for the mobile Room Finder app.}
-    \label{deployment_diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/TopperNav Deployment Diagram.drawio.png}
+  \caption{Deployment diagram for mobile + external services.}
+  \label{fig:deployment}
 \end{figure}
 
 
@@ -462,11 +465,11 @@ Text goes here.
 \subsection{Requirements Traceability Table}
 %150 words and table
 %	Create a table that compares all requirements to use cases to make sure there are no missing features.
-Text and table goes here.
- 
-\begin{figure}[h!]
+The table ties requirements to use cases to verify coverage.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{images/ReqTraceabilityTable.png}
+    \includegraphics[width=0.9\textwidth]{images/ReqTraceabilityTable.png}
     \caption{Requirements Traceability Table.}
     \label{state_diagram}
 \end{figure}
