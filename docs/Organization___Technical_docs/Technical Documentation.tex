@@ -202,6 +202,12 @@ User interface metrics should be gathered and optimized.                        
 The application should maintain functionality with limited or no internet connection                                 \\ \hline
 The application should consume minimal battery power while running in the background.                                 \\ \hline
 The application should be designed with a clean, intuitive user interface that prioritizes ease of use.                                 \\ \hline
+\textbf{Performance Non-Functional Requirements} \\ \hline
+The application should load maps and calculate routes within 3 seconds under normal network conditions. \\ \hline
+The application should maintain a user interface response delay of no more than 200~ms during normal operation. \\ \hline
+The system should handle at least 100 concurrent users without significant degradation in performance. \\ \hline
+The database should return query results within 1 second on average. \\ \hline
+The application should ensure smooth real-time navigation updates with a refresh rate suitable for walking speed (1--2~Hz). \\ \hline
 
 \end{tabular}
 \end{table}
@@ -295,15 +301,19 @@ The logical system boundaries for the GPS-Based Campus Room Finder defines the f
 \subsection{Wireframes and Storyboard}
 %150 words
 % Use wireframes to create scenes and images of the user interface.  Connect the wireframes to show progression through the product to create a storyboard.  Describe the wireframes and storyboard.
-Text goes here.
+Our wire-frame shows the basic interactions one can do with our app. The user enters the app and either choose to search a location to go to or to use history to go to a previous  location. Once one of these 2 options is chosen then a arrow pop ups on screen and starts pointing in the direction to go along side the arrow is some text instructions telling the user where to go. Once the user makes it near the location the app with tell them they are near and to look at room numbers. It will then give the option to put in a new location. 
+
+\begin{figure}[h!]
+    \centering
+	\includegraphics[scale=0.5]{images/TopperNavWireframe.png} 
+	\caption{The wireframe of the basic use of our GPS app.}
+    \label{Wireframe}
+\end{figure}
+
+
 
 %uncomment the section below when you're ready to insert an image
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=1\textwidth]{images/picture_of_storyboard.png}
-%    \caption{Description of the image here.}
-%    \label{storyboard}
-%\end{figure}
+
 
 %---------------------------End Wireframes and Storyboard----------------------------------
 
@@ -605,12 +615,30 @@ Text goes here
 \subsubsection{Product Performance Requirements}
 %100 words and list of performance non-functional requirements.
 %Define and justify performance requirements.  These should be added to the list of non-functional requirements.
-Text goes here.
+The GPS Campus Room Finder must perform efficiently usual university network conditions. The application should loud the navigation tool and calculate the navigation routes within 3 seconds, while also maintaining a smooth UI responsiveness with less than 200 ms delay for location updates. It must support at least 100 concurrent users without service degradation. The database should respond within 1 second on average. These requirements ensure reliable, real-time navigation to keep users satisfied. By defining performance metrics, the system guarantees an easily scalable, fast, and reliable experience.
+
+\begin{itemize}
+    \item Navigation load time $\leq$ 3 seconds
+    \item Route generation time $\leq$ 3 seconds
+    \item UI response delay $\leq$ 200~ms
+    \item Database query response $\leq$ 1 second
+    \item Supports $\geq$ 100 concurrent users
+\end{itemize}
 
 \subsubsection{Measurable Performance Objectives}
 %100 words and list of objectives.
 %Measurable Performance Objectives should be stated in this section that relate to the performance requirements.
-Text goes here.
+The GPS-Based Campus Room Finder must meet specific performance objectives to ensure its smooth and reliable for users. System response times, accuracy, and scalability will be monitored during testing. The application should provide optimal routes and render navigation tools quickly to support real-time navigation. Location tracking must remain accurate when on campus, even with below optimal network latency. These measurable objectives ensure the system is consistent across devices even with sub-par conditions. The following metrics define the measurable performance goals to be achieved during testing and deployment. These metrics are response time, accuracy, interface responsiveness, query speed, and multi-user scalability.
+
+
+\begin{itemize}
+    \item Route and map generation time $\leq$ 3 seconds
+    \item Location accuracy within $\pm$5 meters
+    \item User interface response delay $\leq$ 200~ms
+    \item Database query response $\leq$ 1 second
+    \item Support for $\geq$ 100 concurrent users without degradation
+    \item Navigation refresh rate of 1--2~Hz during movement
+\end{itemize}
 
 \subsubsection{Application Workload}
 %200 words
