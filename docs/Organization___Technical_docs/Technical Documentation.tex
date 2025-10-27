@@ -464,7 +464,7 @@ The diagram shows the physical side of the system, which is the user device like
 \subsection{Version Control}
 %150 words
 %Describe your group's approach to version control.  Include details on how and when you make commits to GitHub.  Explain version naming, branching, and integration approaches.
-Text goes here.
+We make sure to keep all of our versions update so that we keep everything clean and so that everyone can keep up to date on new changes made with the system. The way we make this nice and easy is through Git Hub. We have a Git Hub repository set up so that we all can keep up with each of our changes we make so that others can have our changes as fast as possible. We mainly just commit to the main branch of our repository. For naming we really don't have a naming convention for our version but with our current progress we should be in something like 0.5 but once we are finished it should be in 1.0. 
 
 
 %---------------------------End Version Control------------------------------------------------
@@ -535,7 +535,8 @@ Overall, the systems UX focuses on speed, clarity, and easy use. Making it an ef
 \subsubsection{Approach to Security in all Process Steps}
 %200 words
 %Describe how your team modified the original technical document to address security issues in the Requirements, Modeling and Design, and Implementation sections.
-Text goes here.
+
+For our mobile app and the very specific scope we have our app doesn't have to many security features we don't have a login but if we had more time or wanted to continue this project later on it would be something we would implement. But we chose secure practices from the "Secure Coding Practices Checklist" to help us keep everything secure. These are Database security, Input validation, File Management, Memory Management, Error handling/logging, and Output Encoding. These are some of the security features we want to implement into our mobile app. The biggest one that we need is the database security because our app uses a database to store User location data and building/rooms location data. Something that will help us keep our database secure are some of the other options which are input validation and output encoding. The input validation will mainly making sure that the request for the locations go to the right database and are not sent elsewhere or intercepted by other person. Output encoding would make sure that the results and the route generation from the database would be easily hacked into. File management would really just help us keep more organized but with well organized files this will help us be able to see any codes that aren't ours and that could be harmful. memory management would make sure that we don't have to much memory usage so that it doesn't make users phone slow and cause problems. Error handling will make sure that any errors we get will be immediately be sent to us so that we will be able to fix it on the other side we will have logging which will keep a log of our errors and everything that happens so that we can prevent any errors from occurring. 
 
 
 \subsubsection{Security Threat Model}
@@ -546,7 +547,8 @@ Text goes here.
 \subsubsection{Security Levels}
 %150 words
 %Describe the different security levels for general users and administrators.  Also describe the authentication/authorization techniques for users of the software product.
-Text goes here
+
+We don't have to many security levels for our project because we are keeping the scope small and for now only on one phone so that its easier. But some of the basic security levels we would have are the User level. This level will get basic entry to our mobile app so that they can go into the app and use it by getting a location. This level will not have access to the database or the code. The next level would be the Administrators or us the people creating the app. This level would give us access to everything from the database to the source code. Something we could implement later could be a third level the is in between called location manager. This would be a level that could add locations to the database for areas that haven't been added. This level will have access to the database and be able to add locations but won't have access to the source code.
 
 %---------------------------End Product Security-------------------------------------------------
 
