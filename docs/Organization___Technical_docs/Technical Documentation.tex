@@ -9,6 +9,7 @@
 \usepackage{imakeidx}
 \usepackage{indentfirst}
 \usepackage{placeins}
+\usepackage{multirow}
 \makeindex
 %---------------------------Do Not Edit Anything Above This Line!!------------------------
 
@@ -28,8 +29,8 @@
 
        \vspace{0.5cm}
        \Large
-       Sprint  1 \\
-       9-30-2025 \\
+       Sprint  3 \\
+       10-28-2025 \\
    \end{center}
 
        \vspace{1.5cm}
@@ -328,7 +329,6 @@ Our wire-frame shows the basic interactions one can do with our app. The user en
 %	Title for each Class Diagram
 %	Description of how and why each class is used
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used.
-Text goes here.
 
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
@@ -427,10 +427,9 @@ This diagram focuses only on the search and route-display feature in Sprint 2, s
 %	A description of the information given in the diagram
 %	Protocols used for each communication pathway
 %	Mapping to all source code and dependency software (in the Appendix, specific files)
-Text goes here.
+The component model separates the app into five deployable parts: (1) UI Layer, (2) Navigation Engine, (3) GPS Service, (4) Database, and (5) External API. Components communicate via  interfaces to keep the UI testable and to allow swapping the routing provider later. In Sprint 3, only the UI Layer is active; the Navigation Engine exposes no-op methods used by the UI so screenshots and flows are demonstrable without live routing. 
 
 %uncomment the section below when you're ready to insert an image
-Components: UI, Navigation Engine, Database, GPS Service, External API.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{images/component_diagram.png}
@@ -464,8 +463,7 @@ The diagram shows the physical side of the system, which is the user device like
 \subsection{Version Control}
 %150 words
 %Describe your group's approach to version control.  Include details on how and when you make commits to GitHub.  Explain version naming, branching, and integration approaches.
-We make sure to keep all of our versions update so that we keep everything clean and so that everyone can keep up to date on new changes made with the system. The way we make this nice and easy is through Git Hub. We have a Git Hub repository set up so that we all can keep up with each of our changes we make so that others can have our changes as fast as possible. We mainly just commit to the main branch of our repository. For naming we really don't have a naming convention for our version but with our current progress we should be in something like 0.5 but once we are finished it should be in 1.0. 
-
+Our team uses GitHub as the central version control platform to manage all project files and source code. Each member maintains a local copy of the repository and synchronizes changes through frequent commits to ensure consistency and prevent merge conflicts. Commits are pushed after completing small, testable units of work, such as app updates, documentation edits, or minor code adjustments. The main branch serves as the stable build for demonstration and submission. Version numbers follow a milestone-based convention, our current build aligns with version 0.5, representing partial functionality with a completed interface. Final integration and full feature implementation will mark version 1.0. GitHub’s built-in commit history are used for transparency, collaboration, and rollback support. This process ensures our documentation, source code, and assets remain synchronized throughout each sprint.
 
 %---------------------------End Version Control------------------------------------------------
 
@@ -494,7 +492,29 @@ The table ties requirements to use cases to verify coverage.
 \subsection{Data Dictionary}
 %150 words and table
 %	Create a table that displays your Data Dictionary and describe how it is being used to define data structures and other major variables/elements in the software product.
-Text and table goes here.
+This data dictionary defines the essential data elements used by the GPS-Based Campus Room Finder and establishes a shared reference for how information is structured within the application. For this sprint, it focuses on the key elements that support the current UI components, buildings, rooms, search history, and user settings. Each entry outlines the entity, field, type, and a description, ensuring consistency between the database design and the user interface. The dictionary acts as a blueprint for further database integration, guiding how information such as building names, room numbers, and user preferences will be stored, retrieved, and displayed. By defining the fields now, the team can align tasks and maintain naming conventions across classes, SQLite tables, and API calls. This structure helps prevent redundancy, supports scalability, and guarantees that all parts of the system use consistent data definitions moving into Sprint 4.
+
+\begin{table}[H]\centering
+\begin{tabular}{|l|l|l|p{7cm}|}
+\hline
+\textbf{Entity} & \textbf{Field} & \textbf{Type} & \textbf{Description} \\ \hline
+Building & buildingId (PK) & INTEGER & Unique building identifier. \\ \hline
+Building & name & TEXT & Full building name (e.g., “Snell Hall”). \\ \hline
+Building & lat & REAL & Latitude coordinate. \\ \hline
+Building & lng & REAL & Longitude coordinate. \\ \hline
+Room & roomId (PK) & INTEGER & Unique room identifier. \\ \hline
+Room & buildingId (FK) & INTEGER & References Building. \\ \hline
+Room & roomNumber & TEXT & Room label (e.g., “B104”). \\ \hline
+SearchHistory & historyId (PK) & INTEGER & Unique ID for each search entry. \\ \hline
+SearchHistory & queryText & TEXT & User-entered query. \\ \hline
+SearchHistory & createdAt & INTEGER & Timestamp when search was made. \\ \hline
+UserSettings & settingsId (PK) & INTEGER & Always 1; single local config. \\ \hline
+UserSettings & units & TEXT & Distance units (“imperial” / “metric”). \\ \hline
+UserSettings & theme & TEXT & UI theme (“light” / “dark”). \\ \hline
+\end{tabular}
+\end{table}
+
+
 
 
 %---------------------------End Data Dictionary------------------------------------------------
@@ -542,7 +562,14 @@ For our mobile app and the very specific scope we have our app doesn't have to m
 \subsubsection{Security Threat Model}
 %150 words and Security Threat Model
 %Create and add a Security Threat Model, related to the Deployment Diagram, that identifies trust boundaries and potential security risks
-Text goes here.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{images/securitythreatmodel.png}
+  \caption{Security Threat Model with client--server trust boundary and representative threats.}
+  \label{fig:threat_model}
+\end{figure}
+
+The security threat model for the GPS-Based Campus Room Finder is derived from the deployment diagram, which includes a planned cloud service for future expansion. However, in the current sprint, all data and logic are stored locally on the user’s Android device. The primary trust boundary is between the application’s user interface and its local data store rather than over a live network. Current threats include tampering with locally stored building or route data, GPS spoofing, and unauthorized access to cached searches. These are mitigated through Android’s built-in sandboxing, secure SQLite storage, and validation of all input fields. Although the cloud cluster in the deployment model represents potential future capabilities (e.g., live map or database sync), it is not active in the Sprint 3 implementation. Future online versions will extend the threat model to include API authentication, HTTPS encryption, and backend access control.
 
 \subsubsection{Security Levels}
 %150 words
@@ -590,17 +617,36 @@ The GPS-Based Campus Room Finder must meet specific performance objectives to en
 \subsubsection{Application Workload}
 %200 words
 %Application Workload information should be gathered and visualized in this section.  This generally requires historical data on how the software product is being used.  For example, users generally spend 10% of the time interacting with menus, 80% of the time interacting with main features, 5% of the time saving work, etc.  These workloads should not be assumptions or guesses.  Timers need to be created for all major UI features of the product to generate reliable application workload analysis.
-Text goes here.
+Our goal for Sprint 4 is to collect measured workload data that reflects how users actually move through the app rather than relying on assumptions. We will instrument the UI with lightweight timers and event logging to app-private storage. Each log record will capture: timestam, sessionId, eventTyp, screen, durationMs, and (when applicable) queryTextLen and resultCount. Targeted events include: SearchStarted, SearchCompleted, HistoryOpened, HistorySelected, NavShown, NavTick, and SettingsChanged. 
+
+Methodology: (1) Simulated sessions on the emulator (baseline), (2) at least 5 physical-device sessions on a mid-range Android phone. We will run three scripted scenarios: New User: first-time open, type full query, Repeat User: use History, and Multi-Stop: two sequential searches. For each scenario we will collect at least 20 runs to compute stable medians values.
+
+Primary workload metrics to visualize: (a) percent of time per screen (Search, Navigation, History), (b) keystrokes-per-successful-search, (c) search-to-result latency, (d) re-navigation latency from History, (e) navigation refresh cadence (target 1--2~Hz) and UI frame time distribution. We will aggregate to CSVs and produce bar charts and box plots for the above. 
+
+Acceptance gates tied to requirements: Search $\leq$ 3\,s (median), UI tap responsiveness $\leq$ 200\,ms, navigation refresh 1--2~Hz with no spikes ($<$1\% frames $>$16\,ms). All logs remain local and can be cleared in Settings (opt-out). Results and graphs will be included in Sprint 4.
+
 
 \subsubsection{Hardware and Software Bottlenecks}
 %200 words
 %Hardware and Software Bottlenecks should be identified and discussed in this section, with test cases to justlify.
-Text goes here.
+During Sprint 4, we will perform lightweight profiling to identify both hardware and software bottlenecks that could impact navigation accuracy, responsiveness, or reliability. On the hardware side, the app depends on three key resources: GPS, CPU, and battery. Continuous location polling may strain mid-range phones, so the refresh rate (1–2~Hz) will be adjusted to balance smooth updates with efficient power use. Performance tests will compare different polling intervals and note CPU usage, memory footprint, and battery drain during 15-minute simulated walks. Storage I/O will also be reviewed since the SQLite database must quickly read and write local search history and building data without fragmentation or delays.
+
+On the software side, potential bottlenecks include inefficient query logic, excessive UI recomposition in Jetpack Compose, and redundant database access during route updates. We will instrument critical functions with timers and Android Profiler traces to isolate slow operations. Caching frequently used building and room data in memory and delaying rapid UI events will reduce redundant work. Expected outcomes include faster search responses ($\leq$1~s), stable frame rates, and reduced CPU peaks. Documented metrics will verify that each identified issue is mitigated and that the system remains responsive across devices meeting our minimum specifications.
+
 
 \subsubsection{Synthetic Performance Benchmarks}
 %250 words
 %Synthetic Performance Benchmark test cases should be developed and executed on target hardware.  Results should be visualized and discussed in terms of the required target hardware details. (File I/O, CPU, Database).  Sysbench
-Text goes here.
+Since our application runs entirely on mobile hardware, traditional benchmarking tools such as Sysbench are not applicable. Instead, the team will use lightweight synthetic benchmarks developed within Android Studio and the app itself to evaluate the performance of CPU, memory, file I/O, and database operations. These tests will be run on both the Android emulator and at least one physical device that meets the minimum hardware specifications.
+
+The synthetic tests are divided into three major groups:
+\begin{itemize}
+    \item CPU Benchmark: Executes 10,000 iterative distance calculations to simulate route computation workload. The benchmark will record total computation time and average time per iteration to evaluate CPU throughput.
+    \item Database Benchmark: Inserts, queries, and deletes 1,000 building and room records within an in-memory SQLite database. Average query latency and insertion rate will be logged to confirm sub-second performance under realistic data volumes.
+    \item File I/O Benchmark: Writes and reads a 1~MB test file from the app’s local storage to measure sustained I/O throughput and confirm minimal lag during history logging or cache updates.
+\end{itemize}
+
+All results will be collected through Android’s built-in profiler and summarized in Sprint~4 using graphs that visualize average and 95th-percentile latencies. These controlled micro-benchmarks will confirm that the application can maintain consistent responsiveness on target hardware without relying on external servers or heavy instrumentation.
 
 
 \subsubsection{Performance Tests}
