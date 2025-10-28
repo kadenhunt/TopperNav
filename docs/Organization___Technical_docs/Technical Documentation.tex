@@ -10,6 +10,8 @@
 \usepackage{indentfirst}
 \usepackage{placeins}
 \usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
 \makeindex
 %---------------------------Do Not Edit Anything Above This Line!!------------------------
 
@@ -22,18 +24,18 @@
 
 %---------------------------Edit Content in the Box to Create the Title Page--------------
 \begin{titlepage}
-   \begin{center}
-       \vspace*{1cm}
+  \begin{center}
+      \vspace*{1cm}
 	   \Huge
-       \textbf{GPS Based Campus Room Finder}
+      \textbf{GPS Based Campus Room Finder}
 
-       \vspace{0.5cm}
-       \Large
-       Sprint  3 \\
-       10-28-2025 \\
-   \end{center}
+      \vspace{0.5cm}
+      \Large
+      Sprint  3 \\
+      10-28-2025 \\
+  \end{center}
 
-       \vspace{1.5cm}
+      \vspace{1.5cm}
 
 \begin{table}[h!]
 \centering
@@ -46,12 +48,12 @@ Kaden Hunt         & kaden.hunt144@topper.wku.edu         \\ \hline
 \end{tabular}
 \end{table}
 
-%Latex Table Generator    
-%https://www.tablesgenerator.com/     
-        
+%Latex Table Generator   
+%https://www.tablesgenerator.com/    
+      
 \vspace{4in}
 
-\centering  
+\centering 
 Client: Michael Galloway \\
 CS 360 \\
 Fall 2025\\
@@ -96,7 +98,7 @@ Project Technical Documentation
 % No text here.
 
 %---------------------------Project Overview------------------------------------------
-\subsection{Project Overview} %\subsection{} is used to create minor sections 
+\subsection{Project Overview} %\subsection{} is used to create minor sections
 % 300 words
 % Description of the project, what the project provides, its purpose, problems solved, and target audience.
 
@@ -117,24 +119,24 @@ The project scope defines the boundaries, commitments, and outputs required to d
 
 \textbf{Deliverables \& Outcomes:}
 \begin{itemize}
-    \item \textbf{Written Reports:} Detailed organizational and technical documents submitted at the conclusion of each of the four sprints.
-    \item \textbf{Presentations:} A presentation delivered at the end of each sprint to summarize progress and demonstrate results.
-    \item \textbf{Evaluations:} Peer evaluation forms submitted individually by team members after each sprint.
-    \item \textbf{Final Product:} A fully tested, documented, and maintainable Android mobile application that provides GPS-based navigation to campus buildings and rooms.
+   \item \textbf{Written Reports:} Detailed organizational and technical documents submitted at the conclusion of each of the four sprints.
+   \item \textbf{Presentations:} A presentation delivered at the end of each sprint to summarize progress and demonstrate results.
+   \item \textbf{Evaluations:} Peer evaluation forms submitted individually by team members after each sprint.
+   \item \textbf{Final Product:} A fully tested, documented, and maintainable Android mobile application that provides GPS-based navigation to campus buildings and rooms.
 \end{itemize}
 
 \textbf{Work Required:}
 \begin{itemize}
-    \item \textbf{Tasks:} All development tasks including source code creation, user interface design, system integration, testing, and documentation. Additional requirements will be integrated as identified throughout the project.
-    \item \textbf{Team:} 
-        \begin{itemize}
-            \item Kaden Hunt — Project Manager
-            \item Aaron Downing — Documentation Draft
-            \item Ryerson Brower — Research Coordinator, Task Manager
-        \end{itemize}
-    \item \textbf{Time Commitment:} Work will be divided across four sprints. Each team member will contribute 8–10 hours per week to development, meetings, and documentation.
-    \item \textbf{Resources:} GitHub will serve as the version control system and task management platform. The documentation will be written collaboratively in Texmaker. The development will take place on personal laptops running Windows 10 or later which will meet the requirements of Android Studio. of Android Studio.
-    \item \textbf{Schedule:} Deliverables align with the four milestone deadlines outlined on Blackboard. Weekly client meetings occur on Tuesdays at 12:35 p.m. in Snell Hall B104. Internal team meetings will take place on Thursdays at 2:00 p.m.
+   \item \textbf{Tasks:} All development tasks including source code creation, user interface design, system integration, testing, and documentation. Additional requirements will be integrated as identified throughout the project.
+   \item \textbf{Team:}
+       \begin{itemize}
+           \item Kaden Hunt — Project Manager
+           \item Aaron Downing — Documentation Draft
+           \item Ryerson Brower — Research Coordinator, Task Manager
+       \end{itemize}
+   \item \textbf{Time Commitment:} Work will be divided across four sprints. Each team member will contribute 8–10 hours per week to development, meetings, and documentation.
+   \item \textbf{Resources:} GitHub will serve as the version control system and task management platform. The documentation will be written collaboratively in Texmaker. The development will take place on personal laptops running Windows 10 or later which will meet the requirements of Android Studio. of Android Studio.
+   \item \textbf{Schedule:} Deliverables align with the four milestone deadlines outlined on Blackboard. Weekly client meetings occur on Tuesdays at 12:35 p.m. in Snell Hall B104. Internal team meetings will take place on Thursdays at 2:00 p.m.
 \end{itemize}
 
 Altogether, this scope establishes what will be delivered, the benefits it provides, and the foundation for successful implementation
@@ -166,7 +168,7 @@ The application will provide an estimated travel time based on the mobile locati
 The application will provide voice-guided navigation for hands-free use.                                 \\ \hline
 The application will allow users to bookmark or “favorite” frequently visited rooms for quicker searches.                                 \\ \hline
 The application will provide a “recent searches” history so users can quickly reselect prior destinations                                 \\ \hline
-                                           
+                                         
 \end{tabular}
 \end{table}
 
@@ -226,11 +228,10 @@ The mandatory non functional requirements for the WKU GPS-based campus room find
 \subsection{Target Hardware Details}
 % 200 words
 % CPU (if a specific architecture is needed), RAM (required while the product is running), Persistent Storage Space, Network connection (Wi-Fi, Ethernet), Network bandwidth (required while the product is running), Output devices (Monitor (how many? What resolution?), speakers, VR headset), Input devices (Keyboard, mouse, touchscreen, VR headset).  Create test cases for each to verify.
-We will create a mobile app for students and faculty around campus. The target hardware for our mobile app will primarily be for smart phones on Android. The minimum requirements are: The minimum CPU required is a quad-core ARM-based processor (or the processor that's in most smart phones) to ensure real time GPS processing and navigation. Our test case for the CPU would be to run a continuous navigation to confirm smooth updating with no lag. You would need at least 2 GB of RAM so the product can also run things like GPS tracking at the same time and the rendering of the map. Our test case for the RAM would be to monitor memory usage under a heavy load. A minimum of 200 MB of persistent storage is needed for the application installation, location files, and maps. Our storage test case would be to install the app and see how much it takes up. Network connectivity will be necessary via Wi-Fi or 4G/5G mobile data, with at least 1 Mbps of sustained bandwidth for map updates and routing queries. 
-The targeted output device will be a touchscreen of a smart phone. 
+We will create a mobile app for students and faculty around campus. The target hardware for our mobile app will primarily be for smart phones on Android. The minimum requirements are: The minimum CPU required is a quad-core ARM-based processor (or the processor that's in most smart phones) to ensure real time GPS processing and navigation. Our test case for the CPU would be to run a continuous navigation to confirm smooth updating with no lag. You would need at least 2 GB of RAM so the product can also run things like GPS tracking at the same time and the rendering of the map. Our test case for the RAM would be to monitor memory usage under a heavy load. A minimum of 200 MB of persistent storage is needed for the application installation, location files, and maps. Our storage test case would be to install the app and see how much it takes up. Network connectivity will be necessary via Wi-Fi or 4G/5G mobile data, with at least 1 Mbps of sustained bandwidth for map updates and routing queries.
+The targeted output device will be a touchscreen of a smart phone.
 
 We don't have a plan to place this app on PC or computers but it would be something to possible implement in the future. A software we are using called Android studios also has some hardware requirement. These are: A OS of 64-bit Windows 10 or newer, RAM with 16 GB, a CPU with a processor with visualization support (Intel VT-x or AMD-V), micro architecture from after 2017. 16 GB of free disk space, preferably on a Solid State Drive (SSD). A GPU with at least 4 GB of VRAM.
- 
 
 %---------------------------End Target Hardware Details----------------------------------------------
 
@@ -240,7 +241,7 @@ We don't have a plan to place this app on PC or computers but it would be someth
 \subsection{Software Product Development}
 % 200 words
 % List the following used with their purpose for development: IDEs, IDE plugins, Software Languages, Software Frameworks, Version Control, Asset Generation Tools, and tools for colaboration (Google Drive, One Drive, GitHub, etc.).  Describle how each tool is used within your team.
-The software we are using already are Google doc, TexLive, github, Android Studio, SQL and VScode. Google doc we use to keep up with each others documents and any document we need to print out. For our documentations we are using TexLive to edit both or Organizational and Tech Docs. Github we used to get a repository that is easy to access and easy for us to place our updated docs and code. Git hub also helps use be able to access everything without having to send files back and forth. We already planed on using VScode and the coding language we will use to code our app is JAVA. VS code with the help of github makes it really easy to pull everyone's code when they edit it so once again we are not sending a ton of files and getting them mixed up. One of the more important software we will use is Android Studio. This will allow use to code and Android app easier. This will also let use visualize the app when we don't have a Android phone accessible. For our database to hold all the data for location of rooms and routes we will use SQL.  
+The software we are using already are Google doc, TexLive, github, Android Studio, SQL and VScode. Google doc we use to keep up with each others documents and any document we need to print out. For our documentations we are using TexLive to edit both or Organizational and Tech Docs. Github we used to get a repository that is easy to access and easy for us to place our updated docs and code. Git hub also helps use be able to access everything without having to send files back and forth. We already planed on using VScode and the coding language we will use to code our app is JAVA. VS code with the help of github makes it really easy to pull everyone's code when they edit it so once again we are not sending a ton of files and getting them mixed up. One of the more important software we will use is Android Studio. This will allow use to code and Android app easier. This will also let use visualize the app when we don't have a Android phone accessible. For our database to hold all the data for location of rooms and routes we will use SQL. 
 
 %---------------------------End Software Product Deveopment-----------------------------------------
 
@@ -266,7 +267,7 @@ The software we are using already are Google doc, TexLive, github, Android Studi
 \subsubsection{Physical}
 %100 words
 % Describe the Physical System Boundaries.
-The physical system boundaries for the GPS-Based Campus Room finder are limited to mobile devices, primarily Android smart phones used by WKU students and faculty. The application relies on the mobile phones built-in hardware components such as the GPS system, touchscreen interface, and mobile network for accurate navigation. It will not include any external hardware devices not included in the user's smart phone. The system interacts with Google Maps API (or similar) for real-time navigation and requires the campus buildings and room data stored in the project database. Any devices outside of android mobile devices, such as iphones, PCs, and kiosks, lie out of the scope of the project. The application requires minimum resources, 2GB of RAM and 100mb of storage will be enough which is available on most android phones. Security is ensured by relying on the built-in authentication systems on the phone. The application is easily scalable by adding functionality for more android phones and adding a larger database. 
+The physical system boundaries for the GPS-Based Campus Room finder are limited to mobile devices, primarily Android smart phones used by WKU students and faculty. The application relies on the mobile phones built-in hardware components such as the GPS system, touchscreen interface, and mobile network for accurate navigation. It will not include any external hardware devices not included in the user's smart phone. The system interacts with Google Maps API (or similar) for real-time navigation and requires the campus buildings and room data stored in the project database. Any devices outside of android mobile devices, such as iphones, PCs, and kiosks, lie out of the scope of the project. The application requires minimum resources, 2GB of RAM and 100mb of storage will be enough which is available on most android phones. Security is ensured by relying on the built-in authentication systems on the phone. The application is easily scalable by adding functionality for more android phones and adding a larger database.
 
 %uncomment the section below when you're ready to insert an image
 %\begin{figure}[h!]
@@ -302,13 +303,13 @@ The logical system boundaries for the GPS-Based Campus Room Finder defines the f
 \subsection{Wireframes and Storyboard}
 %150 words
 % Use wireframes to create scenes and images of the user interface.  Connect the wireframes to show progression through the product to create a storyboard.  Describe the wireframes and storyboard.
-Our wire-frame shows the basic interactions one can do with our app. The user enters the app and either choose to search a location to go to or to use history to go to a previous  location. Once one of these 2 options is chosen then a arrow pop ups on screen and starts pointing in the direction to go along side the arrow is some text instructions telling the user where to go. Once the user makes it near the location the app with tell them they are near and to look at room numbers. It will then give the option to put in a new location. 
+Our wire-frame shows the basic interactions one can do with our app. The user enters the app and either choose to search a location to go to or to use history to go to a previous  location. Once one of these 2 options is chosen then a arrow pop ups on screen and starts pointing in the direction to go along side the arrow is some text instructions telling the user where to go. Once the user makes it near the location the app with tell them they are near and to look at room numbers. It will then give the option to put in a new location.
 
 \begin{figure}[h!]
-    \centering
-	\includegraphics[scale=0.5]{images/TopperNavWireframe.png} 
+   \centering
+	\includegraphics[scale=0.5]{images/TopperNavWireframe.png}
 	\caption{The wireframe of the basic use of our GPS app.}
-    \label{Wireframe}
+   \label{Wireframe}
 \end{figure}
 
 
@@ -324,7 +325,7 @@ Our wire-frame shows the basic interactions one can do with our app. The user en
 \subsection{UML}
 
 \subsubsection{Class Diagrams}
-%At least one for each design pattern category.   
+%At least one for each design pattern category.  
 %Each class diagram should include the following:
 %	Title for each Class Diagram
 %	Description of how and why each class is used
@@ -332,17 +333,17 @@ Our wire-frame shows the basic interactions one can do with our app. The user en
 
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.62\textwidth]{images/Facade Design Pattern.drawio.png}
-  \caption{Structural Design Pattern: \textit{Facade} for routing \& map services.}
-  \label{fig:facade}
+ \centering
+ \includegraphics[width=0.62\textwidth]{images/Facade Design Pattern.drawio.png}
+ \caption{Structural Design Pattern: \textit{Facade} for routing \& map services.}
+ \label{fig:facade}
 \end{figure}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.62\textwidth]{images/Singleton Class Diagram.png}
-  \caption{Creational Design Pattern: \textit{Singleton} for AppConfig.}
-  \label{fig:singleton}
+ \centering
+ \includegraphics[width=0.62\textwidth]{images/Singleton Class Diagram.png}
+ \caption{Creational Design Pattern: \textit{Singleton} for AppConfig.}
+ \label{fig:singleton}
 \end{figure}
 
 \begin{figure}[H]
@@ -360,10 +361,10 @@ Our wire-frame shows the basic interactions one can do with our app. The user en
 Actors: Student/Faculty (User). Core use cases: Determine Location, Search Room, Generate Route, Display Estimated Travel Time
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/Use Case Diagrams.png}
-    \caption{Use Case Diagrams.}
-    \label{use_case_diagram}
+   \centering
+   \includegraphics[width=1\textwidth]{images/Use Case Diagrams.png}
+   \caption{Use Case Diagrams.}
+   \label{use_case_diagram}
 \end{figure}
 
 
@@ -377,10 +378,10 @@ Actors: Student/Faculty (User). Core use cases: Determine Location, Search Room,
 %uncomment the section below when you're ready to insert an image\\
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/Use Case Scenario.png}
-    \caption{Use Case Scenario Table for the search room use case.}
-    \label{use_case_scenario}
+   \centering
+   \includegraphics[width=1\textwidth]{images/Use Case Scenario.png}
+   \caption{Use Case Scenario Table for the search room use case.}
+   \label{use_case_scenario}
 \end{figure}
 
 
@@ -394,10 +395,10 @@ The following sequence diagram shows the process of the actor (user) getting int
 
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{images/TopperNav Sequance.drawio.png}
-    \caption{Sequence diagram for the user route request, generation, and update.}
-    \label{use_case_scenario}
+   \centering
+   \includegraphics[width=0.6\textwidth]{images/TopperNav Sequance.drawio.png}
+   \caption{Sequence diagram for the user route request, generation, and update.}
+   \label{seq_toppernav}
 \end{figure}
 
 \subsubsection{State Diagrams}
@@ -406,18 +407,18 @@ The following sequence diagram shows the process of the actor (user) getting int
 %	Title for each State Diagram
 %	A short description of the information given in the diagram
 %	Mapping to source code (in the Appendix, specific files and line numbers) of where it’s used
-The following state diagram models the process of a user searching for a campus room. 
-The diagram begins when the user enters a room number and submits it. 
-The system then validates the input: if it is invalid, the user is prompted to retry; if valid, the system queries the database. 
-If the room is found, a path is generated and directions are displayed. 
-If the room is not found, or a query fails, the user can correct their input and resubmit. 
-This diagram focuses only on the search and route-display feature in Sprint 2, since implementation has not yet begun. 
+The following state diagram models the process of a user searching for a campus room.
+The diagram begins when the user enters a room number and submits it.
+The system then validates the input: if it is invalid, the user is prompted to retry; if valid, the system queries the database.
+If the room is found, a path is generated and directions are displayed.
+If the room is not found, or a query fails, the user can correct their input and resubmit.
+This diagram focuses only on the search and route-display feature in Sprint 2, since implementation has not yet begun.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{images/state_diagram.png}
-    \caption{State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}
-    \label{state_diagram}
+   \centering
+   \includegraphics[width=0.4\textwidth]{images/state_diagram.png}
+   \caption{State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}
+   \label{state_diagram}
 \end{figure}
 
 \subsubsection{Component Diagrams}
@@ -427,14 +428,14 @@ This diagram focuses only on the search and route-display feature in Sprint 2, s
 %	A description of the information given in the diagram
 %	Protocols used for each communication pathway
 %	Mapping to all source code and dependency software (in the Appendix, specific files)
-The component model separates the app into five deployable parts: (1) UI Layer, (2) Navigation Engine, (3) GPS Service, (4) Database, and (5) External API. Components communicate via  interfaces to keep the UI testable and to allow swapping the routing provider later. In Sprint 3, only the UI Layer is active; the Navigation Engine exposes no-op methods used by the UI so screenshots and flows are demonstrable without live routing. 
+The component model separates the app into five deployable parts: (1) UI Layer, (2) Navigation Engine, (3) GPS Service, (4) Database, and (5) External API. Components communicate via  interfaces to keep the UI testable and to allow swapping the routing provider later. In Sprint 3, only the UI Layer is active; the Navigation Engine exposes no-op methods used by the UI so screenshots and flows are demonstrable without live routing.
 
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.6\textwidth]{images/component_diagram.png}
-  \caption{Component diagram.}
-  \label{fig:component}
+ \centering
+ \includegraphics[width=0.6\textwidth]{images/component_diagram.png}
+ \caption{Component diagram.}
+ \label{fig:component}
 \end{figure}
 
 \subsubsection{Deployment Diagrams}
@@ -448,16 +449,49 @@ The diagram shows the physical side of the system, which is the user device like
 
 %uncomment the section below when you're ready to insert an image
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.4\textwidth]{images/TopperNav Deployment Diagram.drawio.png}
-  \caption{Deployment diagram for mobile + external services.}
-  \label{fig:deployment}
+ \centering
+ \includegraphics[width=0.4\textwidth]{images/TopperNav Deployment Diagram.drawio.png}
+ \caption{Deployment diagram for mobile + external services.}
+ \label{fig:deployment}
 \end{figure}
 
 
 %---------------------------End Unified Modeling Language----------------------------------
 
-% No text here.
+\subsection{Mapping of Source Code to UML Diagrams}
+% Maps concrete files/lines or classes/methods to each UML artifact. Sprint 3 group completed UI so mapping is prospective.
+
+
+Sprint 3 focused on the interactive UI only. The classes and adapters shown in the UML are planned for Sprint 4. This subsection documents the planned mapping so the design stays testable and traceable as implementation begins next sprint.
+
+Planned class and file mapping
+
+1) Facade pattern (Fig. \ref{fig:facade})
+  Planned files: core/AppConfig.java, core/RouteFacade.java, core/MapProviderAdapter.java
+  Responsibility: expose a single entry point for route generation and map services so the UI remains decoupled.
+
+2) Singleton pattern for configuration (Fig. \ref{fig:singleton})
+  Planned files: core/AppConfig.java
+  Responsibility: store app-wide flags such as units and theme, and provide lazy accessors for settings.
+
+3) State pattern for navigation flow (Fig. \ref{state_pattern})
+  Planned files: nav/state/BrowsingState.java, nav/state/SearchingState.java, nav/state/NavigatingState.java, nav/state/ErrorState.java
+  Responsibility: model screen-to-screen transitions and error handling without tightly coupling UI logic.
+
+4) Use Case diagrams (Fig. \ref{use_case_diagram})
+  Current UI files: ui/screens/HomeScreen.kt, ui/screens/SearchScreen.kt, ui/screens/NavigationScreen.kt, ui/components/SearchBar.kt, ui/components/HistoryList.kt
+  Coverage: determine location, search for room, generate route, show time estimate.
+
+5) Sequence diagram
+  Planned linkage: ui ViewModel methods will call RouteFacade which calls MapProviderAdapter, which retrieves cached building and room data from local database access classes.
+  Planned files: ui/viewmodel/SearchViewModel.kt, data/RoomRepository.kt, data/BuildingRepository.kt
+
+6) State diagram
+  Planned linkage: the state classes listed above will drive which screen renders and which actions are enabled.
+  Planned files: nav/state/* as listed in item 3
+
+
+
 
 %---------------------------Version Control------------------------------------------------
 \subsection{Version Control}
@@ -476,10 +510,10 @@ Our team uses GitHub as the central version control platform to manage all proje
 The table ties requirements to use cases to verify coverage.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{images/ReqTraceabilityTable.png}
-    \caption{Requirements Traceability Table.}
-    \label{state_diagram}
+   \centering
+   \includegraphics[width=0.9\textwidth]{images/ReqTraceabilityTable.png}
+   \caption{Requirements Traceability Table.}
+   \label{req_trace_table}
 \end{figure}
 
 
@@ -526,11 +560,11 @@ UserSettings & theme & TEXT & UI theme (“light” / “dark”). \\ \hline
 %---------------------------User Experience Details------------------------------------------------
 \subsection{User Experience}
 
-The GPS-Based Campus Room Finder prioritizes a simple, intuitive, and visually appealing user-interface to ensure users can quickly locate rooms with minimal effort. Upon opening the app, users are greeted with a clean home screen displaying a search bar and quick-access icons for common destinations. The navigation flow is designed to streamline the room searching process for a quick and easy to use app. Users can either type a room name or select from recent searches to instantly view directions. 
+The GPS-Based Campus Room Finder prioritizes a simple, intuitive, and visually appealing user-interface to ensure users can quickly locate rooms with minimal effort. Upon opening the app, users are greeted with a clean home screen displaying a search bar and quick-access icons for common destinations. The navigation flow is designed to streamline the room searching process for a quick and easy to use app. Users can either type a room name or select from recent searches to instantly view directions.
 
-Interactive map allows users to zoom, rotate, and view detailed paths through campus buildings. Visual cues such as estimated travel time, text box directions, and an arrow pointing to the desired destination allows users to stay oriented. The app uses familiar icons and consistent layouts to maintain ease of use. 
+Interactive map allows users to zoom, rotate, and view detailed paths through campus buildings. Visual cues such as estimated travel time, text box directions, and an arrow pointing to the desired destination allows users to stay oriented. The app uses familiar icons and consistent layouts to maintain ease of use.
 
-Overall, the systems UX focuses on speed, clarity, and easy use. Making it an efficient tool for navigating campus. 
+Overall, the systems UX focuses on speed, clarity, and easy use. Making it an efficient tool for navigating campus.
 
 
 
@@ -556,17 +590,17 @@ Overall, the systems UX focuses on speed, clarity, and easy use. Making it an ef
 %200 words
 %Describe how your team modified the original technical document to address security issues in the Requirements, Modeling and Design, and Implementation sections.
 
-For our mobile app and the very specific scope we have our app doesn't have to many security features we don't have a login but if we had more time or wanted to continue this project later on it would be something we would implement. But we chose secure practices from the "Secure Coding Practices Checklist" to help us keep everything secure. These are Database security, Input validation, File Management, Memory Management, Error handling/logging, and Output Encoding. These are some of the security features we want to implement into our mobile app. The biggest one that we need is the database security because our app uses a database to store User location data and building/rooms location data. Something that will help us keep our database secure are some of the other options which are input validation and output encoding. The input validation will mainly making sure that the request for the locations go to the right database and are not sent elsewhere or intercepted by other person. Output encoding would make sure that the results and the route generation from the database would be easily hacked into. File management would really just help us keep more organized but with well organized files this will help us be able to see any codes that aren't ours and that could be harmful. memory management would make sure that we don't have to much memory usage so that it doesn't make users phone slow and cause problems. Error handling will make sure that any errors we get will be immediately be sent to us so that we will be able to fix it on the other side we will have logging which will keep a log of our errors and everything that happens so that we can prevent any errors from occurring. 
+For our mobile app and the very specific scope we have our app doesn't have to many security features we don't have a login but if we had more time or wanted to continue this project later on it would be something we would implement. But we chose secure practices from the "Secure Coding Practices Checklist" to help us keep everything secure. These are Database security, Input validation, File Management, Memory Management, Error handling/logging, and Output Encoding. These are some of the security features we want to implement into our mobile app. The biggest one that we need is the database security because our app uses a database to store User location data and building/rooms location data. Something that will help us keep our database secure are some of the other options which are input validation and output encoding. The input validation will mainly making sure that the request for the locations go to the right database and are not sent elsewhere or intercepted by other person. Output encoding would make sure that the results and the route generation from the database would be easily hacked into. File management would really just help us keep more organized but with well organized files this will help us be able to see any codes that aren't ours and that could be harmful. memory management would make sure that we don't have to much memory usage so that it doesn't make users phone slow and cause problems. Error handling will make sure that any errors we get will be immediately be sent to us so that we will be able to fix it on the other side we will have logging which will keep a log of our errors and everything that happens so that we can prevent any errors from occurring.
 
 
 \subsubsection{Security Threat Model}
 %150 words and Security Threat Model
 %Create and add a Security Threat Model, related to the Deployment Diagram, that identifies trust boundaries and potential security risks
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.95\textwidth]{images/securitythreatmodel.png}
-  \caption{Security Threat Model with client--server trust boundary and representative threats.}
-  \label{fig:threat_model}
+ \centering
+ \includegraphics[width=0.95\textwidth]{images/securitythreatmodel.png}
+ \caption{Security Threat Model with client--server trust boundary and representative threats.}
+ \label{fig:threat_model}
 \end{figure}
 
 The security threat model for the GPS-Based Campus Room Finder is derived from the deployment diagram, which includes a planned cloud service for future expansion. However, in the current sprint, all data and logic are stored locally on the user’s Android device. The primary trust boundary is between the application’s user interface and its local data store rather than over a live network. Current threats include tampering with locally stored building or route data, GPS spoofing, and unauthorized access to cached searches. These are mitigated through Android’s built-in sandboxing, secure SQLite storage, and validation of all input fields. Although the cloud cluster in the deployment model represents potential future capabilities (e.g., live map or database sync), it is not active in the Sprint 3 implementation. Future online versions will extend the threat model to include API authentication, HTTPS encryption, and backend access control.
@@ -592,11 +626,11 @@ We don't have to many security levels for our project because we are keeping the
 The GPS Campus Room Finder must perform efficiently usual university network conditions. The application should loud the navigation tool and calculate the navigation routes within 3 seconds, while also maintaining a smooth UI responsiveness with less than 200 ms delay for location updates. It must support at least 100 concurrent users without service degradation. The database should respond within 1 second on average. These requirements ensure reliable, real-time navigation to keep users satisfied. By defining performance metrics, the system guarantees an easily scalable, fast, and reliable experience.
 
 \begin{itemize}
-    \item Navigation load time $\leq$ 3 seconds
-    \item Route generation time $\leq$ 3 seconds
-    \item UI response delay $\leq$ 200~ms
-    \item Database query response $\leq$ 1 second
-    \item Supports $\geq$ 100 concurrent users
+   \item Navigation load time $\leq$ 3 seconds
+   \item Route generation time $\leq$ 3 seconds
+   \item UI response delay $\leq$ 200~ms
+   \item Database query response $\leq$ 1 second
+   \item Supports $\geq$ 100 concurrent users
 \end{itemize}
 
 \subsubsection{Measurable Performance Objectives}
@@ -606,22 +640,22 @@ The GPS-Based Campus Room Finder must meet specific performance objectives to en
 
 
 \begin{itemize}
-    \item Route and map generation time $\leq$ 3 seconds
-    \item Location accuracy within $\pm$5 meters
-    \item User interface response delay $\leq$ 200~ms
-    \item Database query response $\leq$ 1 second
-    \item Support for $\geq$ 100 concurrent users without degradation
-    \item Navigation refresh rate of 1--2~Hz during movement
+   \item Route and map generation time $\leq$ 3 seconds
+   \item Location accuracy within $\pm$5 meters
+   \item User interface response delay $\leq$ 200~ms
+   \item Database query response $\leq$ 1 second
+   \item Support for $\geq$ 100 concurrent users without degradation
+   \item Navigation refresh rate of 1--2~Hz during movement
 \end{itemize}
 
 \subsubsection{Application Workload}
 %200 words
 %Application Workload information should be gathered and visualized in this section.  This generally requires historical data on how the software product is being used.  For example, users generally spend 10% of the time interacting with menus, 80% of the time interacting with main features, 5% of the time saving work, etc.  These workloads should not be assumptions or guesses.  Timers need to be created for all major UI features of the product to generate reliable application workload analysis.
-Our goal for Sprint 4 is to collect measured workload data that reflects how users actually move through the app rather than relying on assumptions. We will instrument the UI with lightweight timers and event logging to app-private storage. Each log record will capture: timestam, sessionId, eventTyp, screen, durationMs, and (when applicable) queryTextLen and resultCount. Targeted events include: SearchStarted, SearchCompleted, HistoryOpened, HistorySelected, NavShown, NavTick, and SettingsChanged. 
+Our goal for Sprint 4 is to collect measured workload data that reflects how users actually move through the app rather than relying on assumptions. We will instrument the UI with lightweight timers and event logging to app-private storage. Each log record will capture: timestam, sessionId, eventTyp, screen, durationMs, and (when applicable) queryTextLen and resultCount. Targeted events include: SearchStarted, SearchCompleted, HistoryOpened, HistorySelected, NavShown, NavTick, and SettingsChanged.
 
 Methodology: (1) Simulated sessions on the emulator (baseline), (2) at least 5 physical-device sessions on a mid-range Android phone. We will run three scripted scenarios: New User: first-time open, type full query, Repeat User: use History, and Multi-Stop: two sequential searches. For each scenario we will collect at least 20 runs to compute stable medians values.
 
-Primary workload metrics to visualize: (a) percent of time per screen (Search, Navigation, History), (b) keystrokes-per-successful-search, (c) search-to-result latency, (d) re-navigation latency from History, (e) navigation refresh cadence (target 1--2~Hz) and UI frame time distribution. We will aggregate to CSVs and produce bar charts and box plots for the above. 
+Primary workload metrics to visualize: (a) percent of time per screen (Search, Navigation, History), (b) keystrokes-per-successful-search, (c) search-to-result latency, (d) re-navigation latency from History, (e) navigation refresh cadence (target 1--2~Hz) and UI frame time distribution. We will aggregate to CSVs and produce bar charts and box plots for the above.
 
 Acceptance gates tied to requirements: Search $\leq$ 3\,s (median), UI tap responsiveness $\leq$ 200\,ms, navigation refresh 1--2~Hz with no spikes ($<$1\% frames $>$16\,ms). All logs remain local and can be cleared in Settings (opt-out). Results and graphs will be included in Sprint 4.
 
@@ -641,9 +675,9 @@ Since our application runs entirely on mobile hardware, traditional benchmarking
 
 The synthetic tests are divided into three major groups:
 \begin{itemize}
-    \item CPU Benchmark: Executes 10,000 iterative distance calculations to simulate route computation workload. The benchmark will record total computation time and average time per iteration to evaluate CPU throughput.
-    \item Database Benchmark: Inserts, queries, and deletes 1,000 building and room records within an in-memory SQLite database. Average query latency and insertion rate will be logged to confirm sub-second performance under realistic data volumes.
-    \item File I/O Benchmark: Writes and reads a 1~MB test file from the app’s local storage to measure sustained I/O throughput and confirm minimal lag during history logging or cache updates.
+   \item CPU Benchmark: Executes 10,000 iterative distance calculations to simulate route computation workload. The benchmark will record total computation time and average time per iteration to evaluate CPU throughput.
+   \item Database Benchmark: Inserts, queries, and deletes 1,000 building and room records within an in-memory SQLite database. Average query latency and insertion rate will be logged to confirm sub-second performance under realistic data volumes.
+   \item File I/O Benchmark: Writes and reads a 1~MB test file from the app’s local storage to measure sustained I/O throughput and confirm minimal lag during history logging or cache updates.
 \end{itemize}
 
 All results will be collected through Android’s built-in profiler and summarized in Sprint~4 using graphs that visualize average and 95th-percentile latencies. These controlled micro-benchmarks will confirm that the application can maintain consistent responsiveness on target hardware without relying on external servers or heavy instrumentation.
@@ -653,7 +687,39 @@ All results will be collected through Android’s built-in profiler and summariz
 %250 words and test case description with results
 %Performance Test Cases should be given in this section.  Test Cases should be executed and results should be visualized (Images, Graphs, etc.)
 %examples of performance tests include, but not limited to: Load testing (expected and peak loads, exceeding peak loads), Stress testing, throughput testing, function call timers, compatability testing, fault tolerance testing, etc.
-Text goes here
+Scope and rationale
+Sprint 3 delivered the interactive UI. The following performance tests will be executed on a mid-range Android device in Sprint 4 to satisfy the product performance requirements and measurable objectives defined earlier.
+
+Planned test cases
+
+1) Search latency
+Goal: median time from query submit to results shown is 3 seconds or less.
+Method: instrument SearchScreen to log timestamps for SearchStarted and SearchCompleted. Run 20 scripted trials across three scenarios (new user, repeat user via history, multi-stop).
+Output: box plot of latency per scenario plus 95th percentile.
+
+2) Navigation refresh cadence
+Goal: navigation updates at 1–2 Hz with no visible jitter.
+Method: log NavTick events and UI frame times during a 15-minute walk simulation. Compare refresh cadence at 1 Hz and 2 Hz.
+Output: bar chart of average and 95th percentile frame times.
+
+3) Local database query and write
+Goal: queries return within 1 second on average.
+Method: seed 1,000 rooms across multiple buildings; measure average read of room by building and number; measure write rate for recent-search entries.
+Output: table of average and 95th percentile latencies.
+
+4) File I/O for cache
+Goal: sustained read/write of a 1 MB cache file without blocking UI events.
+Method: write, read, and delete a test file while capturing frame timing.
+Output: line chart of frame time distribution during I/O.
+
+5) Power and CPU profile
+Goal: maintain responsiveness while minimizing CPU spikes.
+Method: compare GPS polling at 1 Hz vs 2 Hz using Android Profiler.
+Output: table of average CPU, peak CPU, and battery drop over 15 minutes.
+
+Deliverables
+CSV logs checked into the repo, figures included in this document, and a short discussion comparing results against the targets. Any regressions will include a mitigation note and owner.
+
 
 
 %---------------------------End Product Performance-------------------------------------------------
@@ -691,7 +757,7 @@ Text goes here
 
 \textbf{Test deliverables:} %50 words. All the deliverables from the testing e.g. approaches, test cases, reports etc.
 
-\textbf{Item pass/fail criteria:} %50 words. Entry and Exit criteria for all items. 
+\textbf{Item pass/fail criteria:} %50 words. Entry and Exit criteria for all items.
 
 \textbf{Environmental needs:} %50 words. Infrastructure required for SUT and executing test cases.
 
@@ -800,7 +866,13 @@ Text goes here.
 \section{Conclusion}
 %200 words
 %Concluding remarks that summarizes the purpose and outcomes of the technical document.  Discussion of short comings and future work.
-Text goes here.
+
+This sprint delivered a working UI flow for the GPS-based Campus Room Finder: the home screen, search and history interactions, and the navigation view with time estimates displayed. The goal was to validate usability and interaction design before committing to routing and data layers. That objective was achieved: the app boots, the screens render reliably, and the primary user journeys are clear and fast to operate.
+
+Several rubric sections are documented as plans because the underlying code is not yet implemented by design this sprint. Specifically, the mapping from source to UML, performance tests, and database-backed routing are described as prospective work starting in Sprint 4. The workload plan, and bottleneck analysis outline how we will measure and improve latency, refresh cadence, and resource usage on real devices.
+
+Shortcomings in this iteration include lack of live routing, no persistent building and room dataset, and no measured performance results. The next sprint will implement the Facade and State layers, connect the local database, instrument timers, and produce graphs and traceable mappings back to the diagrams. With the UI foundation in place, the project is positioned to meet the remaining performance, security, and documentation requirements on schedule.
+
 
 %---------------------------End Conclusion Section-------------------------------------
 
@@ -814,15 +886,49 @@ Text goes here.
 
 \subsection{Software Product Build Instructions}
 %Include in this section all steps for copying the current state of the product to new computers for continued development.
-Text goes here.
+Project state
+This sprint only includes the user interface prototype of the TopperNav Android app. No database or routing logic is connected yet. The app currently runs on the Android emulator within Android Studio.
+
+Build setup
+1) Install Android Studio (Jellyfish or newer).
+2) Ensure Android SDK Platform 34 and Build Tools are installed.
+3) Clone the TopperNav GitHub repository.
+4) Open the project in Android Studio and allow Gradle to sync.
+5) In the AVD Manager, create an emulator (for example, Pixel 6 – Android 14).
+6) Click Run to launch the app on the emulator.
+
+Future deployment
+In Sprint 4, the app will be deployed to a physical Android device for on-device testing and performance measurement. This will allow testing of GPS features, latency, and resource usage.
 
 \subsection{Software Product User Guide}
 %Include in this section an overview guide on how to use your software product for a general user and an administrative user.
-Text goes here.
+General user
+1) Open the app to the home screen.
+2) Type a building and room (for example, Snell Hall B104) or open History to select a recent search.
+3) The navigation view shows direction cues and a time estimate based on the mock flow in Sprint 3.
+4) Use back to return to home and start another search.
+
+Administrator (development team)
+Use Android Studio to install debug builds on an emulator or lab device.
 
 \subsection{Source Code with Comments}
 %Include in this section all final source code for the product.  Label each file with headings such as, C.1 file1.c, C.2 file2.c, C.3 file1.py, etc.  All source code should be effectively commented.
-Text goes here.
+This section includes the full Kotlin source files that define the current user interface for the TopperNav mobile application.
+Since Sprint 3 focused exclusively on UI development, these files represent the four core screens in the app: Search, Navigation, History, and Settings.
+Future sprints will integrate these interfaces with the underlying route engine, GPS access, and SQLite database. 
+Each file is shown in full below and includes inline comments for clarity.
+
+\subsubsection{C.1 SearchScreen.kt}
+\verbatiminput{SearchScreen.kt}
+
+\subsubsection{C.2 NavigationScreen.kt}
+\verbatiminput{NavigationScreen.kt}
+
+\subsubsection{C.3 HistoryScreen.kt}
+\verbatiminput{HistoryScreen.kt}
+
+\subsubsection{C.4 SettingsScreen.kt}
+\verbatiminput{SettingsScreen.kt}
 
 
 
@@ -860,8 +966,10 @@ Text goes here.
 %\footnote{You can put the link in a footnote like this.}
 
 % Anything to the right of a percent sign will be ignored by LaTeX.
-% You can use this to put notes to yourself.  
+% You can use this to put notes to yourself. 
 
 
 
 \end{document}
+
+

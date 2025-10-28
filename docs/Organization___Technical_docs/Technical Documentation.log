@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.31)  27 OCT 2025 00:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.31)  27 OCT 2025 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,56 +356,65 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@dima=\skip55
 \bigstrutjot=\dimen186
 )
-\"Technical Documentation"@idxfile=\write3
-\openout3 = `"Technical Documentation.idx"'.
+(c:/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks24
+\verbatim@line=\toks25
+\verbatim@in@stream=\read2
+)
+(c:/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count318
+\FV@InFile=\read3
+\FV@TabBox=\box103
+\c@FancyVerbLine=\count319
+\FV@StepNumber=\count320
+\FV@OutFile=\write3
+)
+\"Technical Documentation"@idxfile=\write4
+\openout4 = `"Technical Documentation.idx"'.
 
 
 Writing index file "Technical Documentation".idx
 (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count318
+\l__color_backend_stack_int=\count321
 )
-(./Technical Documentation.aux
-
-LaTeX Warning: Label `use_case_scenario' multiply defined.
-
-
-LaTeX Warning: Label `state_diagram' multiply defined.
-
-)
+(./Technical Documentation.aux)
 \openout1 = `"Technical Documentation.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
- (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
+\scratchcounter=\count322
 \scratchdimen=\dimen187
-\scratchbox=\box103
-\nofMPsegments=\count320
-\nofMParguments=\count321
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count322
+\scratchbox=\box104
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count325
 \MPscratchDim=\dimen188
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks27
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -415,11 +424,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 23.
 
 (./Technical Documentation.out) (./Technical Documentation.out)
-\@outlinefile=\write4
-\openout4 = `"Technical Documentation.out"'.
+\@outlinefile=\write5
+\openout5 = `"Technical Documentation.out"'.
 
 
 *geometry* driver: auto-detecting
@@ -478,11 +487,11 @@ Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 40.
+(Font)              <10.95> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 40.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 40.
+(Font)              <6> on input line 42.
 
 
 [1
@@ -493,8 +502,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 ])
-\tf@toc=\write5
-\openout5 = `"Technical Documentation.toc"'.
+\tf@toc=\write6
+\openout6 = `"Technical Documentation.toc"'.
 
 
 
@@ -503,10 +512,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \cleardoublepage
+l.76 \cleardoublepage
                       [2] (./Technical Documentation.lof)
-\tf@lof=\write6
-\openout6 = `"Technical Documentation.lof"'.
+\tf@lof=\write7
+\openout7 = `"Technical Documentation.lof"'.
 
 
 
@@ -515,13 +524,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 \cleardoublepage
+l.84 \cleardoublepage
                       [1
 
 
 
 ]
-Overfull \hbox (22.25098pt too wide) in paragraph at lines 157--171
+Overfull \hbox (22.25098pt too wide) in paragraph at lines 159--173
  [][] 
  []
 
@@ -532,11 +541,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 \end{table}
+l.173 \end{table}
                   [1
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (62.4923pt too wide) in paragraph at lines 189--214
+Overfull \hbox (62.4923pt too wide) in paragraph at lines 191--216
  [][] 
  []
 
@@ -545,104 +554,123 @@ Overfull \hbox (62.4923pt too wide) in paragraph at lines 189--214
 [2]
 
 [3]
-<images/TopperNavWireframe.png, id=334, 1156.32pt x 474.573pt>
+<images/TopperNavWireframe.png, id=359, 1156.32pt x 474.573pt>
 File: images/TopperNavWireframe.png Graphic file (type png)
 <use images/TopperNavWireframe.png>
-Package pdftex.def Info: images/TopperNavWireframe.png  used on input line 309.
+Package pdftex.def Info: images/TopperNavWireframe.png  used on input line 310.
 
 (pdftex.def)             Requested size: 578.15858pt x 237.28592pt.
 
-Overfull \hbox (36.13358pt too wide) in paragraph at lines 309--310
+Overfull \hbox (36.13358pt too wide) in paragraph at lines 310--311
  [][] 
  []
 
-<images/Facade Design Pattern.drawio.png, id=336, 603.25375pt x 502.87875pt>
+<images/Facade Design Pattern.drawio.png, id=361, 603.25375pt x 502.87875pt>
 File: images/Facade Design Pattern.drawio.png Graphic file (type png)
 <use images/Facade Design Pattern.drawio.png>
 Package pdftex.def Info: images/Facade Design Pattern.drawio.png  used on input
- line 336.
+ line 337.
 (pdftex.def)             Requested size: 336.05286pt x 280.1369pt.
 
 
 [4 <./images/TopperNavWireframe.png>]
-<images/Singleton Class Diagram.png, id=342, 469.755pt x 561.59813pt>
+<images/Singleton Class Diagram.png, id=367, 469.755pt x 561.59813pt>
 File: images/Singleton Class Diagram.png Graphic file (type png)
 <use images/Singleton Class Diagram.png>
 Package pdftex.def Info: images/Singleton Class Diagram.png  used on input line
- 343.
+ 344.
 (pdftex.def)             Requested size: 336.05286pt x 401.75385pt.
 
 
 [5 <./images/Facade Design Pattern.drawio.png>]
-<images/ClassDesignPattern.png, id=348, 714.67pt x 287.0725pt>
+<images/ClassDesignPattern.png, id=373, 714.67pt x 287.0725pt>
 File: images/ClassDesignPattern.png Graphic file (type png)
 <use images/ClassDesignPattern.png>
-Package pdftex.def Info: images/ClassDesignPattern.png  used on input line 349.
+Package pdftex.def Info: images/ClassDesignPattern.png  used on input line 350.
 
 (pdftex.def)             Requested size: 325.2183pt x 130.63571pt.
-<images/Use Case Diagrams.png, id=349, 670.75594pt x 536.75531pt>
+<images/Use Case Diagrams.png, id=374, 670.75594pt x 536.75531pt>
 File: images/Use Case Diagrams.png Graphic file (type png)
 <use images/Use Case Diagrams.png>
-Package pdftex.def Info: images/Use Case Diagrams.png  used on input line 364.
+Package pdftex.def Info: images/Use Case Diagrams.png  used on input line 365.
 (pdftex.def)             Requested size: 542.02501pt x 433.73744pt.
 
 
 [6 <./images/Singleton Class Diagram.png> <./images/ClassDesignPattern.png>]
-<images/Use Case Scenario.png, id=356, 820.56563pt x 545.78906pt>
+<images/Use Case Scenario.png, id=381, 820.56563pt x 545.78906pt>
 File: images/Use Case Scenario.png Graphic file (type png)
 <use images/Use Case Scenario.png>
-Package pdftex.def Info: images/Use Case Scenario.png  used on input line 381.
+Package pdftex.def Info: images/Use Case Scenario.png  used on input line 382.
 (pdftex.def)             Requested size: 542.02501pt x 360.5217pt.
 
 
 [7 <./images/Use Case Diagrams.png>]
-<images/TopperNav Sequance.drawio.png, id=362, 992.70876pt x 934.49126pt>
+<images/TopperNav Sequance.drawio.png, id=387, 992.70876pt x 934.49126pt>
 File: images/TopperNav Sequance.drawio.png Graphic file (type png)
 <use images/TopperNav Sequance.drawio.png>
 Package pdftex.def Info: images/TopperNav Sequance.drawio.png  used on input li
-ne 398.
+ne 399.
 (pdftex.def)             Requested size: 325.2183pt x 306.14438pt.
 
 
 [8 <./images/Use Case Scenario.png>]
-<images/state_diagram.png, id=368, 1025.8325pt x 1529.715pt>
+<images/state_diagram.png, id=393, 1025.8325pt x 1529.715pt>
 File: images/state_diagram.png Graphic file (type png)
 <use images/state_diagram.png>
-Package pdftex.def Info: images/state_diagram.png  used on input line 418.
+Package pdftex.def Info: images/state_diagram.png  used on input line 419.
 (pdftex.def)             Requested size: 216.80669pt x 323.28035pt.
 
 
 [9 <./images/TopperNav Sequance.drawio.png>]
-<images/component_diagram.png, id=375, 783.92876pt x 472.76625pt>
+<images/component_diagram.png, id=400, 783.92876pt x 472.76625pt>
 File: images/component_diagram.png Graphic file (type png)
 <use images/component_diagram.png>
-Package pdftex.def Info: images/component_diagram.png  used on input line 435.
+Package pdftex.def Info: images/component_diagram.png  used on input line 436.
 (pdftex.def)             Requested size: 325.2183pt x 196.12941pt.
 
 
 [10 <./images/state_diagram.png> <./images/component_diagram.png>]
-<images/TopperNav Deployment Diagram.drawio.png, id=382, 352.31625pt x 492.8412
+<images/TopperNav Deployment Diagram.drawio.png, id=407, 352.31625pt x 492.8412
 5pt>
 File: images/TopperNav Deployment Diagram.drawio.png Graphic file (type png)
 <use images/TopperNav Deployment Diagram.drawio.png>
 Package pdftex.def Info: images/TopperNav Deployment Diagram.drawio.png  used o
-n input line 452.
+n input line 453.
 (pdftex.def)             Requested size: 216.80669pt x 303.2798pt.
-<images/ReqTraceabilityTable.png, id=383, 1230.84843pt x 629.35126pt>
-File: images/ReqTraceabilityTable.png Graphic file (type png)
-<use images/ReqTraceabilityTable.png>
-Package pdftex.def Info: images/ReqTraceabilityTable.png  used on input line 48
-0.
-(pdftex.def)             Requested size: 487.8192pt x 249.42169pt.
+
+Overfull \hbox (34.9972pt too wide) in paragraph at lines 469--472
+[]\OT1/cmr/m/n/10.95 1) Fa-cade pat-tern (Fig. []2[]) Planned files: core/AppCo
+nfig.java, core/RouteFacade.java, core/MapProviderAdapter.java
+ []
+
+
+Overfull \hbox (43.8181pt too wide) in paragraph at lines 477--480
+[]\OT1/cmr/m/n/10.95 3) State pat-tern for nav-i-ga-tion flow (Fig. []4[]) Plan
+ned files: nav/state/BrowsingState.java, nav/state/SearchingState.java,
+ []
+
+
+Overfull \hbox (2.28197pt too wide) in paragraph at lines 481--484
+\OT1/cmr/m/n/10.95 ui/screens/NavigationScreen.kt, ui/components/SearchBar.kt, 
+ui/components/HistoryList.kt Cov-er-age: de-ter-mine
+ []
+
 
 
 [11 <./images/TopperNav Deployment Diagram.drawio.png>]
+<images/ReqTraceabilityTable.png, id=417, 1230.84843pt x 629.35126pt>
+File: images/ReqTraceabilityTable.png Graphic file (type png)
+<use images/ReqTraceabilityTable.png>
+Package pdftex.def Info: images/ReqTraceabilityTable.png  used on input line 51
+4.
+(pdftex.def)             Requested size: 487.8192pt x 249.42169pt.
+
 
 [12 <./images/ReqTraceabilityTable.png>]
-<images/securitythreatmodel.png, id=395, 806.01125pt x 452.69125pt>
+<images/securitythreatmodel.png, id=423, 806.01125pt x 452.69125pt>
 File: images/securitythreatmodel.png Graphic file (type png)
 <use images/securitythreatmodel.png>
-Package pdftex.def Info: images/securitythreatmodel.png  used on input line 567
+Package pdftex.def Info: images/securitythreatmodel.png  used on input line 601
 .
 (pdftex.def)             Requested size: 514.9221pt x 289.20334pt.
 
@@ -656,40 +684,62 @@ Package pdftex.def Info: images/securitythreatmodel.png  used on input line 567
 [16]
 
 [17]
+File: "SearchScreen.kt"  (verbatim)
 
-[18] (./Technical Documentation.aux)
+
+[18]
+
+[19]
+File: "NavigationScreen.kt"  (verbatim)
+
+
+[20]
+Overfull \hbox (50.08983pt too wide) in paragraph at lines 925--925
+[]                \OT1/cmtt/m/n/10.95 text = destination?.ifBlank { "No destina
+tion selected" } ?: "No destination selected",[] 
+ []
+
+File: "HistoryScreen.kt"  (verbatim)
+
+
+[21]
+
+[22]
+File: "SettingsScreen.kt"  (verbatim)
+
+
+[23]
+
+[24] (./Technical Documentation.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `"Technical Documentation".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 9CA37C8143EE873A2E482ED589C7C460;9220.
+(rerunfilecheck)             Checksum: E14B2C8F298ADE4E60A31485DB6B9824;10185.
  ) 
 Here is how much of TeX's memory you used:
- 11575 strings out of 467800
- 188456 string characters out of 5436061
- 609617 words of memory out of 5000000
- 39990 multiletter control sequences out of 15000+600000
- 632375 words of font info for 58 fonts, out of 8000000 for 9000
+ 12050 strings out of 467800
+ 196323 string characters out of 5436061
+ 618133 words of memory out of 5000000
+ 40441 multiletter control sequences out of 15000+600000
+ 632841 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1756b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1756b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm109
-5.pfb>
-Output written on "Technical Documentation.pdf" (22 pages, 752273 bytes).
+s/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:
+/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on "Technical Documentation.pdf" (28 pages, 797021 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 415 compressed objects within 5 object streams
- 91 named destinations out of 1000 (max. 500000)
- 485 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 525 words of extra memory for PDF output out of 10000 (max. 10000000)
 
