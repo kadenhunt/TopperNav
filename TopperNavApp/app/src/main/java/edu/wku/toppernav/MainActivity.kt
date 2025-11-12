@@ -34,10 +34,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import edu.wku.toppernav.ui.HistoryScreen
-import edu.wku.toppernav.ui.NavigationScreen
-import edu.wku.toppernav.ui.SearchScreen
-import edu.wku.toppernav.ui.SettingsScreen
+import edu.wku.toppernav.ui.screens.HistoryScreen
+import edu.wku.toppernav.ui.screens.NavigationScreen
+import edu.wku.toppernav.ui.screens.SearchScreen
+import edu.wku.toppernav.ui.screens.SettingsScreen
 import edu.wku.toppernav.ui.theme.ToppernavTheme
 
 class MainActivity : ComponentActivity() {
@@ -174,11 +174,7 @@ private fun ToppernavApp() {
                         destination = selectedDestination,
                         etaText = "—",
                         travelTimeText = "—",
-                        steps = listOf(
-                            "Head straight for 300 ft",
-                            "Turn left in 50 ft",
-                            "Continue to building entrance"
-                        )
+                        steps = emptyList()
                     )
                 }
                 composable("history") {

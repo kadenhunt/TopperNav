@@ -1,4 +1,4 @@
-package edu.wku.toppernav.ui
+package edu.wku.toppernav.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -25,13 +25,9 @@ fun SearchScreen(
     onQueryChange: (String) -> Unit,
     onEnter: (String) -> Unit
 ) {
-    val rooms = listOf(
-        "SH 202", "SH 210", "SH 305",
-        "MMTH 100", "MMTH 212",
-        "HC 101", "HC 220",
-        "DSU 1033", "DSU 3002"
-    )
-    val results = rooms.filter { it.contains(query.trim(), ignoreCase = true) }
+    // Placeholder: results will come from a ViewModel (repository + use case) later.
+    // Stand‑in static data removed for academic handoff.
+    val results = emptyList<String>()
 
     Column(
         modifier = Modifier
@@ -46,7 +42,7 @@ fun SearchScreen(
             onValueChange = onQueryChange,
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
-            label = { Text("Building and room (e.g., SH 202)") },
+            label = { Text("Building and room (e.g., CODE 202)") },
             placeholder = { Text("Type building or room number") },
         )
 
@@ -57,24 +53,30 @@ fun SearchScreen(
             Text("Enter")
         }
 
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(bottom = 24.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            items(results) { item ->
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onEnter(item) }
-                ) {
-                    ListItem(
-                        headlineContent = { Text(item) },
-                        supportingContent = { Text("Tap to navigate") }
-                    )
+        if (results.isEmpty()) {
+            Text(
+                text = "No search results yet. Data layer integration pending.",
+                style = MaterialTheme.typography.bodyMedium
+            )
+        } else {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(bottom = 24.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(results) { item ->
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onEnter(item) }
+                    ) {
+                        ListItem(
+                            headlineContent = { Text(item) },
+                            supportingContent = { Text("Tap to navigate") }
+                        )
+                    }
                 }
             }
         }
     }
 }
-

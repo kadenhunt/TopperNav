@@ -1,4 +1,4 @@
-package edu.wku.toppernav.ui
+package edu.wku.toppernav.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -34,7 +34,6 @@ fun NavigationScreen(
                 style = MaterialTheme.typography.headlineSmall
             )
 
-            // Compass placeholder: circle + upward navigation arrow
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -67,3 +66,4 @@ fun NavigationScreen(
         }
     }
 }
+

@@ -65,4 +65,11 @@ dependencies {
 
     // Compose runtime saveable (rememberSaveable)
     implementation libs.androidx.compose.runtime.saveable
+
+    // ViewModel with Compose
+    implementation libs.androidx.lifecycle.viewmodel.compose
+
+    // Coroutines
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
 }

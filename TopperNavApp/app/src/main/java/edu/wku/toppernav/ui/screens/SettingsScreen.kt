@@ -1,4 +1,4 @@
-package edu.wku.toppernav.ui
+package edu.wku.toppernav.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

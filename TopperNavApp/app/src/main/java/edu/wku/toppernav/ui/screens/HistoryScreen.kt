@@ -1,4 +1,4 @@
-package edu.wku.toppernav.ui
+package edu.wku.toppernav.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -66,3 +66,4 @@ fun HistoryScreen(
         }
     }
 }
+
