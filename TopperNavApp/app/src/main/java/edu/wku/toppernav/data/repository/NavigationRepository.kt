@@ -18,7 +18,8 @@ interface NavigationRepository {
 class FakeNavigationRepository : NavigationRepository {
     override suspend fun getBuildings(): List<Building> {
         // TODO(back-end): Load buildings from DB or service.
-        return emptyList()
+        override suspend fun getBuildings(): List<Building> = emptyList()
+        override suspend fun searchRooms(query: String): List<String> = emptyList()
     }
 
     override suspend fun searchRooms(query: String): List<String> {
