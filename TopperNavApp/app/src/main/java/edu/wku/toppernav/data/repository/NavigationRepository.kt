@@ -12,14 +12,13 @@ interface NavigationRepository {
 
 /**
  * Placeholder in-memory implementation for UI-only milestone.
- * No stand-in data is shipped; backend team will replace this with
- * real Room/Retrofit implementations.
+ * Backend will replace this with real Room/Retrofit implementations.
  */
 class FakeNavigationRepository : NavigationRepository {
+
     override suspend fun getBuildings(): List<Building> {
         // TODO(back-end): Load buildings from DB or service.
-        override suspend fun getBuildings(): List<Building> = emptyList()
-        override suspend fun searchRooms(query: String): List<String> = emptyList()
+        return emptyList()
     }
 
     override suspend fun searchRooms(query: String): List<String> {
