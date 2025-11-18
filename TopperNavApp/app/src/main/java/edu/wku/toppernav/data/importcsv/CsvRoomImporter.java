@@ -12,7 +12,6 @@ import java.util.List;
 import edu.wku.toppernav.data.local.db.TopperNavDatabase;
 import edu.wku.toppernav.data.local.entity.RoomEntity;
 
-
 public class CsvRoomImporter {
 
     private final Context context;
@@ -30,13 +29,16 @@ public class CsvRoomImporter {
         BufferedReader reader = null;
 
         try {
-            InputStream is = context.getAssets().open("toppernav_export.csv)");
+            InputStream is = context.getAssets().open("toppernav_export.csv");
             reader = new BufferedReader(new InputStreamReader(is));
 
             String line;
             boolean header = true;
             while ((line = reader.readLine()) != null) {
-                if (header) { header = false; continue; }
+                if (header) {
+                    header = false;
+                    continue; // skip header line
+                }
                 if (line.trim().isEmpty()) continue;
 
                 String[] cols = line.split(",", -1);
@@ -75,15 +77,31 @@ public class CsvRoomImporter {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (reader != null) try { reader.close(); } catch (IOException ignored) {}
+            if (reader != null) {
+                try { reader.close(); } catch (IOException ignored) {}
+            }
         }
     }
 
     private Integer parseIntSafe(String s) {
-        try { return Integer.parseInt(s.trim()); } catch (Exception e) {return null; }
+        try {
+            return Integer.parseInt(s.trim());
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private Double parseDoubleSafe(String s) {
+        try {
+            String t = s.trim();
+            if (t.isEmpty()) return null;
+            return Double.parseDouble(t);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private Long parseLongSafe(String s) {
         try {
             String t = s.trim();
             if (t.isEmpty()) return null;

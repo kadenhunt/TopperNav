@@ -11,19 +11,18 @@ import androidx.room.PrimaryKey;
                 @Index(value = {"building", "room"}, unique = true)
         }
 )
-
 public class RoomEntity {
 
     @PrimaryKey(autoGenerate = true)
     private long id;
 
     @NonNull
-    private String building;   // e.g. "SH", "AC", or full name
+    private String building;   // e.g. "SH"
 
     @NonNull
     private String room;       // e.g. "210"
 
-    private Integer floor;     // nullable
+    private Integer floor;
     private Double lat;
     private Double lng;
     private Double altM;
@@ -31,7 +30,7 @@ public class RoomEntity {
     private String notes;
     private Long createdAt;
 
-    // getters / setters 
+    // --- getters / setters ---
 
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }

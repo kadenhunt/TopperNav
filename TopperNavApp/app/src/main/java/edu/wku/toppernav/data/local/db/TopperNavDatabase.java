@@ -10,25 +10,24 @@ import edu.wku.toppernav.data.local.dao.RoomDao;
 import edu.wku.toppernav.data.local.entity.RoomEntity;
 
 @Database(
-    entities = {RoomEntity.class},
-    version = 1,
-    exportSchema = false
+        entities = {RoomEntity.class},
+        version = 1,
+        exportSchema = false
 )
-
 public abstract class TopperNavDatabase extends RoomDatabase {
 
     public abstract RoomDao roomDao();
 
     private static volatile TopperNavDatabase INSTANCE;
 
-    public static TopperNavDatabase getInstance(Context content) {
+    public static TopperNavDatabase getInstance(Context context) {
         if (INSTANCE == null) {
             synchronized (TopperNavDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(
-                        context.getApplicationContext(),
-                        TopperNavDatabase.class,
-                        "toppernav.db"
+                            context.getApplicationContext(),
+                            TopperNavDatabase.class,
+                            "toppernav.db"
                     ).build();
                 }
             }
