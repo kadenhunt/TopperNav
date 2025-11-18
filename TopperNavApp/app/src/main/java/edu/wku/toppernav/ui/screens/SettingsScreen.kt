@@ -27,12 +27,11 @@ fun SettingsScreen(
             value = name,
             onValueChange = onNameChange,
             label = { Text("Display name for greeting") },
-            placeholder = { Text("Leave blank for \"Hilltopper\"") },
             singleLine = true
         )
         Text(
-            "UI-only now. Later you'll wire GPS, ETA, step guidance, and a database."
+            "Set a name for the greeting shown in the app header.",
+            style = MaterialTheme.typography.bodyMedium
         )
     }
 }
-

@@ -7,6 +7,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import edu.wku.toppernav.domain.usecase.SearchRoomsUseCase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class SearchViewModel(private val searchRooms: SearchRoomsUseCase) : ViewModel() {
     private val _results = MutableStateFlow<List<String>>(emptyList())
@@ -18,7 +20,7 @@ class SearchViewModel(private val searchRooms: SearchRoomsUseCase) : ViewModel()
     fun search(query: String) {
         _loading.value = true
         viewModelScope.launch {
-            val list = searchRooms(query)
+            val list = withContext(Dispatchers.IO) { searchRooms(query) }
             _results.value = list
             _loading.value = false
         }

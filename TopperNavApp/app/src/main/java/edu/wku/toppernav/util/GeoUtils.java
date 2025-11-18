@@ -1,5 +1,9 @@
 package edu.wku.toppernav.util;
 
+// UML: Utility class (not shown separately in diagrams) used by NavigationViewModel for distance + bearing.
+// Performance: O(1) math operations; safe for 1Hz updates.
+// Security: Pure functions; no external I/O.
+
 public class GeoUtils {
 
     private static final double EARTH_RADIUS_M = 6371000.0;

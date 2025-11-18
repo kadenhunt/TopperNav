@@ -77,5 +77,6 @@ dependencies {
 
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
-
+    // Added Room KTX for coroutine support
+    implementation "androidx.room:room-ktx:$room_version"
 }

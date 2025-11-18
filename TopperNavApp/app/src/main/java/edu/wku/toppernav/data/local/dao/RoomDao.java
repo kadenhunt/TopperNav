@@ -17,7 +17,7 @@ public interface RoomDao {
 
     // for existing rooms
     @Query("SELECT * FROM rooms " +
-           "WHERE building || room LIKE :pattern " +
+           "WHERE (building || ' ' || room) LIKE :pattern " +
            "OR building LIKE :pattern " +
            "OR room LIKE :pattern " +
            "ORDER BY building, room")

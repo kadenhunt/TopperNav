@@ -22,13 +22,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SearchScreen(
     query: String,
+    loading: Boolean,
+    results: List<String>,
     onQueryChange: (String) -> Unit,
     onEnter: (String) -> Unit
 ) {
-    // Placeholder: results will come from a ViewModel (repository + use case) later.
-    // Stand‑in static data removed for academic handoff.
-    val results = emptyList<String>()
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -48,14 +46,16 @@ fun SearchScreen(
 
         Button(
             onClick = { onEnter(query) },
-            enabled = query.isNotBlank()
+            enabled = query.isNotBlank() && !loading
         ) {
-            Text("Enter")
+            Text(if (loading) "Searching..." else "Enter")
         }
 
-        if (results.isEmpty()) {
+        if (loading) {
+            Text("Searching...", style = MaterialTheme.typography.bodyMedium)
+        } else if (results.isEmpty()) {
             Text(
-                text = "No search results yet. Data layer integration pending.",
+                text = "No results. Type at least 2 characters to search.",
                 style = MaterialTheme.typography.bodyMedium
             )
         } else {
