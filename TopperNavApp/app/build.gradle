@@ -79,4 +79,19 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     // Added Room KTX for coroutine support
     implementation "androidx.room:room-ktx:$room_version"
+
+    // Fused Location Provider (Google Play services) for robust location updates
+    implementation "com.google.android.gms:play-services-location:21.0.1"
+
+    // Coroutines - play-services integration for Task.await()
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3"
+
+    // Test dependencies
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3"
+    // Robolectric for Android framework on JVM
+    testImplementation "org.robolectric:robolectric:4.11.1"
+    // AndroidX test core for ApplicationProvider
+    testImplementation "androidx.test:core:1.5.0"
+    // Optional arch core for LiveData/arch components if needed
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
 }

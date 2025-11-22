@@ -1,4 +1,4 @@
-# Acceptance Test Plan (Final Sprint)
+# Acceptance Tests
 
 Summary
 - This project delivers search + local DB + straight‑line navigation metrics (distance, bearing, ETA) and floor advice.
@@ -21,7 +21,7 @@ Summary
 | AT-13 | Mock fallback | Enable mock in AppConfig | Debug shows user=(mockLat,mockLng) | P |
 | AT-14 | Bearing arrow rotation | With user & dest known | Arrow rotates to bearing; north‑up | Pending |
 
-Work to do (post‑submission)
+Work to do
 - Integrate fused location provider for faster indoor fixes and better power behavior.
 - Add device‑heading sensor to rotate arrow relative to the way the phone faces.
 - Persist favorites and history via Room.

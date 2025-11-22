@@ -1,12 +1,10 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces The wireframe of the basic use of our GPS app.}}{4}{figure.caption.6}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Structural Design Pattern: \textit {Facade} for routing \& map services.}}{5}{figure.caption.7}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Creational Design Pattern: \textit {Singleton} for AppConfig.}}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Behavioral Design Pattern: State.}}{6}{figure.caption.9}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Use Case Diagrams.}}{7}{figure.caption.10}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Use Case Scenario Table for the search room use case.}}{8}{figure.caption.11}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {8}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Component diagram.}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Deployment diagram for mobile + external services.}}{11}{figure.caption.15}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Requirements Traceability Table.}}{12}{figure.caption.16}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Security Threat Model with client--server trust boundary and representative threats.}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Structural Design Pattern: \textit {Facade} for routing \& map services.}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Creational Design Pattern: \textit {Singleton} for AppConfig.}}{6}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Behavioral Design Pattern: State.}}{6}{figure.caption.8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Use Case Diagrams.}}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Use Case Scenario Table for the search room use case.}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Component diagram.}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Deployment diagram for mobile + external services.}}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Security Threat Model with client--server trust boundary and representative threats.}}{14}{figure.caption.17}%

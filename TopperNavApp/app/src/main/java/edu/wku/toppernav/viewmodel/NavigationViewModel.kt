@@ -42,11 +42,20 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
         val bearingDeg: Double? = null,
         val etaMinutes: Int? = null,
         val status: String = "",
-        val floorAdvice: String? = null
+        val floorAdvice: String? = null,
+        val onRoute: Boolean = true
     )
 
     private val _state = MutableStateFlow(NavState())
     val state: StateFlow<NavState> = _state.asStateFlow()
+
+    private var csvLogger: CsvLogger? = null
+
+    init {
+        if (AppConfig.enableCsvLogging) {
+            csvLogger = CsvLogger(app, "nav_ticks.csv", header = "timestamp_ms,lat,lng,distance_m,bearing_deg,eta_min")
+        }
+    }
 
     fun setDestination(lat: Double?, lng: Double?, alt: Double?, floor: Int?) {
         _state.value = _state.value.copy(destLat = lat, destLng = lng, destAlt = alt, destFloor = floor)
@@ -66,10 +75,10 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
         // Optional: seed with last known location so UI shows something fast
         try {
             // Mock hook: allow quick demo indoors if configured
-            if (edu.wku.toppernav.core.AppConfig.mockLocationEnabled) {
+            if (AppConfig.mockLocationEnabled) {
                 _state.value = _state.value.copy(
-                    userLat = edu.wku.toppernav.core.AppConfig.mockLat,
-                    userLng = edu.wku.toppernav.core.AppConfig.mockLng,
+                    userLat = AppConfig.mockLat,
+                    userLng = AppConfig.mockLng,
                     userAlt = null
                 )
                 recompute()
@@ -133,6 +142,21 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    private var lastRecalcLat: Double? = null
+    private var lastRecalcLng: Double? = null
+
+    private fun shouldRecompute(lat: Double, lng: Double, destLat: Double, destLng: Double): Boolean {
+        // If user or destination changed significantly or near destination -> recompute
+        val d = GeoUtils.distanceMeters(lat, lng, destLat, destLng)
+        if (d <= AppConfig.navNearThresholdMeters) return true
+        val prevLat = lastRecalcLat
+        val prevLng = lastRecalcLng
+        if (prevLat == null || prevLng == null) return true
+        val moved = GeoUtils.distanceMeters(prevLat, prevLng, lat, lng)
+        if (moved >= AppConfig.navRecalcMoveThresholdMeters) return true
+        return false
+    }
+
     private fun recompute() {
         val s = _state.value
         val lat1 = s.userLat
@@ -140,6 +164,8 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
         val lat2 = s.destLat
         val lng2 = s.destLng
         if (lat1 == null || lng1 == null || lat2 == null || lng2 == null) return
+
+        if (!shouldRecompute(lat1, lng1, lat2, lng2)) return
 
         val d = GeoUtils.distanceMeters(lat1, lng1, lat2, lng2)
         val b = GeoUtils.bearingDegrees(lat1, lng1, lat2, lng2)
@@ -150,15 +176,14 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
 
         // Floor/altitude advice when close to destination
         var advice: String? = null
-        val nearThresholdM = 25.0
-        if (d <= nearThresholdM && AppConfig.enableFloorAdvice) {
+        if (d <= AppConfig.navNearThresholdMeters && AppConfig.enableFloorAdvice) {
             val sb = StringBuilder()
             s.destFloor?.let { sb.append("Proceed to floor $it") }
             val uAlt = s.userAlt
             val dAlt = s.destAlt
             if (uAlt != null && dAlt != null) {
                 val diff = dAlt - uAlt
-                val step = 2.5 // meters ~ one floor difference heuristic
+                val step = 2.5
                 when {
                     diff > step -> sb.append(if (sb.isNotEmpty()) " • " else "").append("Go upstairs")
                     diff < -step -> sb.append(if (sb.isNotEmpty()) " • " else "").append("Go downstairs")
@@ -167,12 +192,43 @@ class NavigationViewModel(app: Application) : AndroidViewModel(app) {
             advice = if (sb.isNotEmpty()) sb.toString() else null
         }
 
+        val outOfCampus = lat1 !in AppConfig.campusMinLat..AppConfig.campusMaxLat ||
+                lng1 !in AppConfig.campusMinLng..AppConfig.campusMaxLng
+        val campusStatus = if (outOfCampus) " (Outside Campus Bounds)" else ""
+
+        // Simple onRoute heuristic: if distance increases versus last recompute by > threshold, mark false
+        val prevDistance = s.distanceMeters
+        val onRoute = if (prevDistance != null && d - prevDistance > AppConfig.navOffRouteThresholdMeters) false else true
+
         _state.value = s.copy(
             distanceMeters = d,
             bearingDeg = b,
             etaMinutes = etaMin,
-            status = "${"%.0f".format(d)} m • ${GeoUtils.toCardinal(b)}",
-            floorAdvice = advice
+            status = "${"%.0f".format(d)} m • ${GeoUtils.toCardinal(b)}$campusStatus",
+            floorAdvice = advice,
+            onRoute = onRoute
         )
+        csvLogger?.log(
+            listOf(
+                System.currentTimeMillis().toString(),
+                lat1.toString(),
+                lng1.toString(),
+                d.toString(),
+                b.toString(),
+                etaMin.toString()
+            )
+        )
+        lastRecalcLat = lat1
+        lastRecalcLng = lng1
+    }
+}
+
+private class CsvLogger(app: Application, fileName: String, header: String) {
+    private val file = java.io.File(app.getExternalFilesDir(null), fileName)
+    init {
+        if (!file.exists()) file.writeText(header + "\n")
+    }
+    @Synchronized fun log(columns: List<String>) {
+        file.appendText(columns.joinToString(",") + "\n")
     }
 }

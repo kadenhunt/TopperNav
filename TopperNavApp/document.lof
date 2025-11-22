@@ -1,0 +1,10 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Structural Design Pattern: \textit {Facade} for routing \& map services.}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Creational Design Pattern: \textit {Singleton} for AppConfig.}}{4}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Behavioral Design Pattern: State.}}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Use Case Diagrams.}}{5}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Use Case Scenario Table for the search room use case.}}{5}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{5}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{5}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Component diagram.}}{5}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Deployment diagram for mobile + external services.}}{5}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Security Threat Model with client--server trust boundary and representative threats.}}{9}{figure.caption.17}%
