@@ -4,7 +4,8 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Use Case Diagrams.}}{7}{figure.caption.9}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Use Case Scenario Table for the search room use case.}}{8}{figure.caption.10}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for the user route request, generation, and update.}}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {7}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Component diagram.}}{10}{figure.caption.13}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Deployment diagram for mobile + external services.}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Security Threat Model with client--server trust boundary and representative threats.}}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {7}{\ignorespaces State UML diagram for the room search feature, showing user input, validation, query, error handling, and path display.}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Component diagram.}}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Deployment diagram for mobile + external services.}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Security Threat Model with client--server trust boundary and representative threats.}}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Unit test execution times showing all tests complete well below 200ms UI responsiveness target. Maximum execution time of 7ms for search repository results test.}}{18}{figure.caption.18}%

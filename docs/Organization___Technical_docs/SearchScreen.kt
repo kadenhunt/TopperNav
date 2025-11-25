@@ -1,4 +1,4 @@
-package edu.wku.toppernav.ui
+package edu.wku.toppernav.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -22,17 +22,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SearchScreen(
     query: String,
+    loading: Boolean,
+    results: List<String>,
     onQueryChange: (String) -> Unit,
     onEnter: (String) -> Unit
 ) {
-    val rooms = listOf(
-        "SH 202", "SH 210", "SH 305",
-        "MMTH 100", "MMTH 212",
-        "HC 101", "HC 220",
-        "DSU 1033", "DSU 3002"
-    )
-    val results = rooms.filter { it.contains(query.trim(), ignoreCase = true) }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -46,35 +40,43 @@ fun SearchScreen(
             onValueChange = onQueryChange,
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
-            label = { Text("Building and room (e.g., SH 202)") },
+            label = { Text("Building and room (e.g., CODE 202)") },
             placeholder = { Text("Type building or room number") },
         )
 
         Button(
             onClick = { onEnter(query) },
-            enabled = query.isNotBlank()
+            enabled = query.isNotBlank() && !loading
         ) {
-            Text("Enter")
+            Text(if (loading) "Searching..." else "Enter")
         }
 
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(bottom = 24.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            items(results) { item ->
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onEnter(item) }
-                ) {
-                    ListItem(
-                        headlineContent = { Text(item) },
-                        supportingContent = { Text("Tap to navigate") }
-                    )
+        if (loading) {
+            Text("Searching...", style = MaterialTheme.typography.bodyMedium)
+        } else if (results.isEmpty()) {
+            Text(
+                text = "No results. Type at least 2 characters to search.",
+                style = MaterialTheme.typography.bodyMedium
+            )
+        } else {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(bottom = 24.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(results) { item ->
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onEnter(item) }
+                    ) {
+                        ListItem(
+                            headlineContent = { Text(item) },
+                            supportingContent = { Text("Tap to navigate") }
+                        )
+                    }
                 }
             }
         }
     }
 }
-

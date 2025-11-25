@@ -4,8 +4,8 @@
 \contentsline {subsection}{\numberline {1.3}Technical Requirements}{2}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Functional Requirements}{2}{subsubsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.2}Non-Functional Requirements}{2}{subsubsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.4}Target Hardware Details}{2}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Software Product Development}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.4}Target Hardware Details}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Software Product Development}{4}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Modeling and Design}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}System Boundaries}{4}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Physical}{4}{subsubsection.2.1.1}%
@@ -17,38 +17,52 @@
 \contentsline {subsubsection}{\numberline {2.3.3}Use Case Scenarios Developed from Use Case Diagrams (Primary, Secondary)}{8}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Sequence Diagrams}{8}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}State Diagrams}{9}{subsubsection.2.3.5}%
-\contentsline {subsubsection}{\numberline {2.3.6}Component Diagrams}{9}{subsubsection.2.3.6}%
-\contentsline {subsubsection}{\numberline {2.3.7}Deployment Diagrams}{10}{subsubsection.2.3.7}%
-\contentsline {subsection}{\numberline {2.4}Mapping of Source Code to UML Diagrams}{10}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Version Control}{11}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Requirements Traceability Table}{11}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.3.6}Component Diagrams}{10}{subsubsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.7}Deployment Diagrams}{11}{subsubsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.4}Mapping of Source Code to UML Diagrams}{12}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Version Control}{12}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Requirements Traceability Table}{13}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Data Dictionary}{13}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}User Experience}{13}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Non-Functional Product Details}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Product Security}{13}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Approach to Security in all Process Steps}{13}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Security Threat Model}{14}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Security Levels}{14}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {2.8}User Experience}{14}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Non-Functional Product Details}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Product Security}{14}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Approach to Security in all Process Steps}{14}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Security Threat Model}{15}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Security Levels}{15}{subsubsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.2}Product Performance}{15}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Product Performance Requirements}{15}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Measurable Performance Objectives}{15}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Application Workload}{15}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Hardware and Software Bottlenecks}{16}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Synthetic Performance Benchmarks}{16}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Performance Tests}{16}{subsubsection.3.2.6}%
-\contentsline {section}{\numberline {4}Software Testing}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Software Testing Plan Template}{17}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Unit Testing}{17}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Unit Tests and Results}{18}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Integration Testing}{18}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Integration Tests and Results}{18}{subsubsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.4}System Testing}{19}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}System Tests and Results}{19}{subsubsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.5}Acceptance Testing}{19}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Acceptance Tests and Results}{19}{subsubsection.4.5.1}%
-\contentsline {section}{\numberline {5}Conclusion}{19}{section.5}%
-\contentsline {section}{\numberline {6}Appendix}{19}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Software Product Build Instructions}{19}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Software Product User Guide}{20}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Source Code with Comments}{20}{subsection.6.3}%
-\contentsline {paragraph}{Note:}{20}{section*.18}%
+\contentsline {subsubsection}{\numberline {3.2.2}Measurable Performance Objectives}{16}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Application Workload}{16}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Hardware and Software Bottlenecks}{17}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Synthetic Performance Benchmarks}{17}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Performance Tests}{17}{subsubsection.3.2.6}%
+\contentsline {section}{\numberline {4}Software Testing}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Software Testing Plan Template}{18}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Unit Testing}{19}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Unit Tests and Results}{19}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Integration Testing}{20}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Integration Tests and Results}{20}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}System Testing}{20}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}System Tests and Results}{21}{subsubsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.5}Acceptance Testing}{21}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Acceptance Tests and Results}{21}{subsubsection.4.5.1}%
+\contentsline {section}{\numberline {5}Conclusion}{22}{section.5}%
+\contentsline {section}{\numberline {6}Appendix}{22}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Software Product Build Instructions}{22}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Software Product User Guide}{22}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Source Code with Comments}{22}{subsection.6.3}%
+\contentsline {paragraph}{Note:}{22}{section*.19}%
+\contentsline {subsubsection}{\numberline {6.3.1}C.1 MainActivity.kt}{22}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}C.2 NavigationViewModel.kt}{26}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}C.3 SearchViewModel.kt}{30}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}C.4 SearchRoomsUseCase.kt}{30}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5}C.5 NavigationRepositoryImpl.kt}{30}{subsubsection.6.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.6}C.6 GeoUtils.java}{31}{subsubsection.6.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.7}C.7 AppConfig.kt}{31}{subsubsection.6.3.7}%
+\contentsline {subsubsection}{\numberline {6.3.8}C.8 NavigationScreen.kt}{32}{subsubsection.6.3.8}%
+\contentsline {subsubsection}{\numberline {6.3.9}C.9 SearchScreen.kt}{35}{subsubsection.6.3.9}%
+\contentsline {subsubsection}{\numberline {6.3.10}C.10 HistoryScreen.kt}{36}{subsubsection.6.3.10}%
+\contentsline {subsubsection}{\numberline {6.3.11}C.11 SettingsScreen.kt}{37}{subsubsection.6.3.11}%
+\contentsline {subsubsection}{\numberline {6.3.12}C.12 TopperNavDatabase.java}{37}{subsubsection.6.3.12}%
+\contentsline {subsubsection}{\numberline {6.3.13}C.13 RoomEntity.java}{37}{subsubsection.6.3.13}%
+\contentsline {subsubsection}{\numberline {6.3.14}C.14 RoomDao.java}{38}{subsubsection.6.3.14}%

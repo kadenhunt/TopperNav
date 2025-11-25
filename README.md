@@ -1,104 +1,153 @@
-# TopperNav (Android)
+# TopperNav
 
-Western Kentucky University indoor navigation application (UI-first milestone). This repository contains the Android client with user interface screens implemented in Kotlin/Jetpack Compose. Data access, database, and networking are intentionally not implemented yet.
+**GPS-Based Campus Room Finder for Western Kentucky University**
 
-## Contents
-- Overview
-- Project structure
-- Build and run
-- Development guidelines
-- Data model and CSV handoff
-- Next steps (for backend integration)
+TopperNav is an Android application designed to help students, faculty, and visitors navigate WKU's campus. The app provides real-time GPS-based navigation to specific rooms within campus buildings, using a local database of building and room locations.
 
-## Overview
-TopperNav provides a basic user interface for searching destinations, viewing simple step placeholders, browsing recent searches, and adjusting a display name used by the greeting. The current code avoids any hardcoded sample data and is ready for a backend team to connect a database and services.
+**Final Sprint 4 Delivery - Fall 2025**
 
-## Project structure
+## Features
+
+### Implemented
+- **Room Search**: Search by building name (e.g., `Snell Hall`), room number (e.g., `B104`), or combined (`Snell Hall B104`)
+  - Database contains 7 rooms: 4 in Snell Hall, 2 in EST, 1 in KTH
+- **GPS Navigation**: Real-time distance, bearing calculation, and dual ETA display
+  - **Arrival Time ETA**: Shows clock time of arrival (e.g., "3:52 PM")
+  - **Travel Time**: Shows duration to destination (e.g., "8 min")
+  - Cardinal directions (N/NE/E/SE/S/SW/W/NW) calculated via `GeoUtils.toCardinal()`
+- **Visual Guidance**: North-up arrow indicator showing direction to destination
+  - Arrow updates automatically after moving 5 meters
+  - **Recenter Button**: Tap to force immediate GPS refresh and update arrow direction
+- **Floor Advice**: Automatic floor detection and guidance when near the target building
+- **Search History**: In-session history of recent searches (most recent first)
+- **Settings**: Customizable greeting name
+- **Local Database**: First-run CSV import into Room database for offline functionality
+- **Location Permissions**: Robust permission handling with debug panel and settings shortcuts
+
+### Architecture Highlights
+- **Kotlin/Jetpack Compose** for modern, reactive UI
+- **MVVM Architecture** with ViewModels and use cases
+- **Room Database** for local data persistence
+- **Clean Architecture** separation (UI → ViewModel → UseCase → Repository → Data)
+- **CSV Import System** for campus data initialization
+
+## Project Structure
 ```
 TopperNavApp/
 ├── app/
 │   ├── src/
 │   │   ├── main/
+│   │   │   ├── assets/toppernav_export.csv
 │   │   │   ├── java/edu/wku/toppernav/
-│   │   │   │   ├── MainActivity.kt         ← App entry and navigation host
-│   │   │   │   ├── ui/                     ← UI only (Jetpack Compose)
-│   │   │   │   │   ├── screens/            ← Composables per screen (Search, Navigate, History, Settings)
-│   │   │   │   │   └── theme/              ← Colors, typography, shapes
-│   │   │   │   ├── viewmodel/              ← ViewModels (state holders) — minimal for now
-│   │   │   │   ├── domain/                 ← Use cases (interfaces for business rules)
-│   │   │   │   │   └── usecase/
-│   │   │   │   ├── data/                   ← Models and repository interfaces
-│   │   │   │   │   ├── model/              ← Data classes (e.g., Building)
-│   │   │   │   │   └── repository/         ← NavigationRepository API and a placeholder impl
-│   │   │   │   └── util/                   ← Small helpers (if any)
-│   │   │   └── AndroidManifest.xml         ← App configuration
-│   └── build.gradle                         ← Module build file
-├── build.gradle                             ← Project build file
-├── settings.gradle                          ← Gradle settings
-└── toppernav_export.csv                     ← Campus data export (see below)
+│   │   │   │   ├── MainActivity.kt                    ← App entry point
+│   │   │   │   ├── core/AppConfig.kt                  ← Feature flags & constants
+│   │   │   │   ├── ui/screens/                        ← Compose UI screens
+│   │   │   │   │   ├── SearchScreen.kt
+│   │   │   │   │   ├── NavigationScreen.kt
+│   │   │   │   │   ├── HistoryScreen.kt
+│   │   │   │   │   └── SettingsScreen.kt
+│   │   │   │   ├── viewmodel/                         ← State management
+│   │   │   │   ├── domain/usecase/                    ← Business logic
+│   │   │   │   ├── data/                              ← Data layer
+│   │   │   │   │   ├── repository/                    ← Repository implementation
+│   │   │   │   │   ├── local/db/                      ← Room database
+│   │   │   │   │   ├── local/dao/                     ← Data access objects
+│   │   │   │   │   └── importcsv/                     ← CSV import logic
+│   │   │   │   └── util/GeoUtils.java                 ← Distance/bearing calculations
+│   │   │   └── AndroidManifest.xml
+│   └── build.gradle
+├── docs/                                               ← Project documentation
+│   ├── ARCHITECTURE.md
+│   ├── REQUIREMENTS_STATUS.md
+│   ├── ACCEPTANCE_TESTS.md
+│   ├── PROJECT_OVERVIEW.md
+│   └── RECENTER_BUTTON.md
+└── settings.gradle
 ```
-Notes:
-- No sample/mock data ships with the UI. Screens render, accept input, and show placeholders only.
-- `NavigationRepository` defines the data access contract. `FakeNavigationRepository` returns empty results intentionally to avoid shipping stand‑in data.
 
-## Build and run
-Prerequisites:
-- Android Studio (latest stable)
-- Android SDK/Platform tools installed via Android Studio
-- JDK 11+ (bundled with recent Android Studio)
+## Getting Started
 
-Open in Android Studio:
-1. File → Open → select the `TopperNavApp` folder.
-2. Let Gradle sync complete.
-3. Use Run to install on an emulator or device.
+### Prerequisites
+- **Android Studio** (latest stable version)
+- **Android SDK** (API 24+ / Android 7.0 or higher)
+- **JDK 11+** (bundled with Android Studio)
 
-Command line (Windows, from repository root):
+### Build and Run
+
+**Using Android Studio:**
+1. Open Android Studio
+2. File → Open → select the `TopperNavApp` folder
+3. Wait for Gradle sync to complete
+4. Click Run (or Shift+F10) to install on emulator or physical device
+
+**Command Line (Windows):**
+```powershell
+cd TopperNavApp
+.\gradlew.bat assembleDebug
 ```
-gradlew.bat assembleDebug
+The APK will be generated at `app/build/outputs/apk/debug/`
+
+**First Launch:**
+- The app automatically imports campus data from the bundled CSV on first run
+- Grant location permissions when prompted for full navigation functionality
+
+## How It Works
+
+### Navigation Algorithm
+- **Distance Calculation**: Haversine formula for accurate GPS distance
+- **Bearing Calculation**: Initial bearing from current location to destination
+- **ETA Calculation**: Based on walking speed constant (1.4 m/s configurable in `AppConfig`)
+- **Floor Detection**: Automatic floor guidance when within proximity of target building
+
+### Data Flow
 ```
-The APK will be under `app/build/outputs/apk/debug/`.
+User Search → SearchViewModel → SearchRoomsUseCase → NavigationRepository 
+→ RoomDao → Room Database → Results displayed
+```
 
-## Development guidelines
-- Keep UI logic in `ui/` composables. Avoid data access in composables.
-- Use ViewModels (`viewmodel/`) to hold UI state once the data layer is available.
-- Keep `domain/usecase` free of Android framework types to enable unit testing.
-- `data/repository` should provide interfaces; implementations can combine local (Room) and remote (Retrofit/Ktor) sources later.
-- Kotlin is preferred; Java interop is supported if needed.
+```
+Navigation Start → LocationManager → NavigationViewModel → Geo Calculations 
+→ UI Updates (Arrow, Distance, ETA)
+```
 
-## Data model and CSV handoff
-The repository includes `toppernav_export.csv` at the project root. Columns:
-- building
-- room
-- floor
-- lat, lng
-- alt_m (altitude meters)
-- accuracy_m (GPS accuracy estimate)
-- notes
-- created_at (epoch ms)
+## Known Limitations
+- **No step-by-step routing**: Provides straight-line distance and bearing only
+- **No voice guidance**: Visual navigation only
+- **No persistent favorites**: History clears on app restart
+- **Android only**: iOS version not implemented
+- **Portrait optimized**: Portrait only
 
-Current app behavior does not read this file. Backend contributors may:
-- Create a simple import utility (Gradle task or runtime one‑shot) to load CSV rows into a local Room database.
-- Define Room entities (e.g., BuildingEntity, RoomEntity) and mappers to domain models.
-- Implement `NavigationRepository` methods using Room DAOs and, later, a remote source if applicable.
+## Documentation
+Comprehensive documentation is available in the `docs/` folder:
+- **ARCHITECTURE.md** - System design, diagrams, and component mapping
+- **REQUIREMENTS_STATUS.md** - Detailed requirement coverage and implementation status
+- **ACCEPTANCE_TESTS.md** - Test scenarios and validation criteria
 
-Suggested import steps (outline):
-1. Add a Room database with DAOs for buildings and rooms.
-2. Write a small importer that parses `toppernav_export.csv` and populates the database on first run (or via a developer‑only debug menu).
-3. Implement `NavigationRepository.getBuildings()` and `searchRooms(query)` using DAOs.
+## Technical Stack
+- **Language**: Kotlin (primary), Java (utilities)
+- **UI Framework**: Jetpack Compose
+- **Architecture**: MVVM with Clean Architecture principles
+- **Database**: Room (SQLite)
+- **Location Services**: Android LocationManager with FusedLocationProvider
+- **Build System**: Gradle with Kotlin DSL
+- **Min SDK**: API 24 (Android 7.0)
+- **Target SDK**: API 34 (Android 14)
 
-## Next steps (for backend integration)
-- Data layer
-  - Define entities and DAOs.
-  - Implement `FakeNavigationRepository` replacement using Room; return real results.
-  - Optional: add Retrofit/Ktor client once a service exists.
-- UI wiring
-  - Introduce ViewModels per screen (e.g., `SearchViewModel`) and connect to use cases.
-  - Replace placeholder texts with state collected from ViewModels.
-- Testing
-  - Unit tests for use cases and repository functions.
-  - Instrumentation test to navigate across tabs.
+## Team
+- **Aaron Downing** - aaron.downing652@topper.wku.edu
+- **Ryerson Brower** - ryerson.brower178@topper.wku.edu
+- **Kaden Hunt** - kaden.hunt144@topper.wku.edu
 
-## Status
-- UI compiles and runs without bundled sample data.
-- Repository APIs exist with no production data sources yet.
-- Project is ready for backend work (database and import of `toppernav_export.csv`).
+**Client**: Michael Galloway  
+**Course**: CS 360 - Software Engineering  
+**Term**: Fall 2025  
+**Institution**: Western Kentucky University
+
+## License
+Academic project for CS 360. All rights reserved by the development team and Western Kentucky University.
+
+---
+
+**Submission Date**: November 25, 2025  
+**Sprint**: 4 (Final)  
+**Status**: Complete and functional
